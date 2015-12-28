@@ -1,0 +1,46 @@
+f=open('input.txt')
+
+label_for=0
+label_while=0
+label_if=0
+
+fo=open('input0.txt','w')
+
+def predo(s):
+    global label_if,label_for,label_while
+
+    index_if=0
+    index_for=0
+    index_while=0
+    
+    while(True):
+        index_for=s.find('for',index_for)
+        if index_for==-1:
+            break
+        index_for=index_for+3
+        s=s[:index_for]+' '+str(label_for)+' '+s[index_for:]
+        label_for=label_for+1
+
+    while(True):
+        index_while=s.find('while',index_while)
+        if index_while==-1:
+            break
+        index_while=index_while+5
+        s=s[:index_while]+' '+str(label_while)+' '+s[index_while:]
+        label_while=label_while+1
+
+    while(True):
+        index_if=s.find('if',index_if)
+        if index_if==-1:
+            break
+        index_if=index_if+2
+        s=s[:index_if]+' '+str(label_if)+' '+s[index_if:]
+        label_if=label_if+1
+
+    fo.write(s)
+
+for line in f.readlines():
+    predo(line)
+
+f.close()
+fo.close()

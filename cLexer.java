@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 c.g 2015-11-28 11:12:11
+// $ANTLR 3.5.2 c.g 2015-12-24 14:21:37
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -568,8 +568,8 @@ public class cLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// c.g:11:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// c.g:11:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// c.g:12:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// c.g:12:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -579,7 +579,7 @@ public class cLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// c.g:11:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// c.g:12:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -624,10 +624,10 @@ public class cLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// c.g:14:5: ( ( '0' .. '9' )+ )
-			// c.g:14:7: ( '0' .. '9' )+
+			// c.g:15:5: ( ( '0' .. '9' )+ )
+			// c.g:15:7: ( '0' .. '9' )+
 			{
-			// c.g:14:7: ( '0' .. '9' )+
+			// c.g:15:7: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -676,14 +676,14 @@ public class cLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// c.g:18:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// c.g:19:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt9=3;
 			alt9 = dfa9.predict(input);
 			switch (alt9) {
 				case 1 :
-					// c.g:18:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+					// c.g:19:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 					{
-					// c.g:18:9: ( '0' .. '9' )+
+					// c.g:19:9: ( '0' .. '9' )+
 					int cnt3=0;
 					loop3:
 					while (true) {
@@ -717,7 +717,7 @@ public class cLexer extends Lexer {
 					}
 
 					match('.'); 
-					// c.g:18:25: ( '0' .. '9' )*
+					// c.g:19:25: ( '0' .. '9' )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -746,7 +746,7 @@ public class cLexer extends Lexer {
 						}
 					}
 
-					// c.g:18:37: ( EXPONENT )?
+					// c.g:19:37: ( EXPONENT )?
 					int alt5=2;
 					int LA5_0 = input.LA(1);
 					if ( (LA5_0=='E'||LA5_0=='e') ) {
@@ -754,7 +754,7 @@ public class cLexer extends Lexer {
 					}
 					switch (alt5) {
 						case 1 :
-							// c.g:18:37: EXPONENT
+							// c.g:19:37: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -766,10 +766,10 @@ public class cLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// c.g:19:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+					// c.g:20:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
 					{
 					match('.'); 
-					// c.g:19:13: ( '0' .. '9' )+
+					// c.g:20:13: ( '0' .. '9' )+
 					int cnt6=0;
 					loop6:
 					while (true) {
@@ -802,7 +802,7 @@ public class cLexer extends Lexer {
 						cnt6++;
 					}
 
-					// c.g:19:25: ( EXPONENT )?
+					// c.g:20:25: ( EXPONENT )?
 					int alt7=2;
 					int LA7_0 = input.LA(1);
 					if ( (LA7_0=='E'||LA7_0=='e') ) {
@@ -810,7 +810,7 @@ public class cLexer extends Lexer {
 					}
 					switch (alt7) {
 						case 1 :
-							// c.g:19:25: EXPONENT
+							// c.g:20:25: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -822,9 +822,9 @@ public class cLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// c.g:20:9: ( '0' .. '9' )+ EXPONENT
+					// c.g:21:9: ( '0' .. '9' )+ EXPONENT
 					{
-					// c.g:20:9: ( '0' .. '9' )+
+					// c.g:21:9: ( '0' .. '9' )+
 					int cnt8=0;
 					loop8:
 					while (true) {
@@ -877,7 +877,7 @@ public class cLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// c.g:32:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// c.g:33:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0=='/') ) {
@@ -911,11 +911,11 @@ public class cLexer extends Lexer {
 
 			switch (alt13) {
 				case 1 :
-					// c.g:32:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// c.g:33:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// c.g:32:14: (~ ( '\\n' | '\\r' ) )*
+					// c.g:33:14: (~ ( '\\n' | '\\r' ) )*
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -944,7 +944,7 @@ public class cLexer extends Lexer {
 						}
 					}
 
-					// c.g:32:28: ( '\\r' )?
+					// c.g:33:28: ( '\\r' )?
 					int alt11=2;
 					int LA11_0 = input.LA(1);
 					if ( (LA11_0=='\r') ) {
@@ -952,7 +952,7 @@ public class cLexer extends Lexer {
 					}
 					switch (alt11) {
 						case 1 :
-							// c.g:32:28: '\\r'
+							// c.g:33:28: '\\r'
 							{
 							match('\r'); 
 							}
@@ -965,11 +965,11 @@ public class cLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// c.g:33:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// c.g:34:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// c.g:33:14: ( options {greedy=false; } : . )*
+					// c.g:34:14: ( options {greedy=false; } : . )*
 					loop12:
 					while (true) {
 						int alt12=2;
@@ -990,7 +990,7 @@ public class cLexer extends Lexer {
 
 						switch (alt12) {
 						case 1 :
-							// c.g:33:42: .
+							// c.g:34:42: .
 							{
 							matchAny(); 
 							}
@@ -1022,10 +1022,10 @@ public class cLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// c.g:36:5: ( ( '\\r' | '\\n' | ' ' | '\\t' )+ )
-			// c.g:36:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
+			// c.g:37:5: ( ( '\\r' | '\\n' | ' ' | '\\t' )+ )
+			// c.g:37:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
 			{
-			// c.g:36:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
+			// c.g:37:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
 			int cnt14=0;
 			loop14:
 			while (true) {
@@ -1075,8 +1075,8 @@ public class cLexer extends Lexer {
 		try {
 			int _type = END;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// c.g:37:5: ( ';' )
-			// c.g:37:7: ';'
+			// c.g:38:5: ( ';' )
+			// c.g:38:7: ';'
 			{
 			match(';'); 
 			}
@@ -1093,8 +1093,8 @@ public class cLexer extends Lexer {
 	// $ANTLR start "EXPONENT"
 	public final void mEXPONENT() throws RecognitionException {
 		try {
-			// c.g:107:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// c.g:107:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// c.g:108:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// c.g:108:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -1104,7 +1104,7 @@ public class cLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// c.g:107:22: ( '+' | '-' )?
+			// c.g:108:22: ( '+' | '-' )?
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0=='+'||LA15_0=='-') ) {
@@ -1127,7 +1127,7 @@ public class cLexer extends Lexer {
 
 			}
 
-			// c.g:107:33: ( '0' .. '9' )+
+			// c.g:108:33: ( '0' .. '9' )+
 			int cnt16=0;
 			loop16:
 			while (true) {
@@ -1443,7 +1443,7 @@ public class cLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "17:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+			return "18:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
 		}
 	}
 

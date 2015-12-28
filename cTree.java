@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 cTree.g 2015-11-28 11:12:12
+// $ANTLR 3.5.2 cTree.g 2015-12-24 14:21:38
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
@@ -118,6 +118,7 @@ public class cTree extends TreeParser {
 	int     labelindex_while=0;
 	int     labelindex_for=0;
 	int     labelindex_func=0;
+	int     deep=0;
 	String  []text  =       new     String[1000];
 	String  []data  =       new     String[1000];
 
@@ -130,7 +131,7 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "boolexpr"
-	// cTree.g:26:1: boolexpr : ( ^( '==' s1= expr s2= expr ) | ^( '!=' s1= expr s2= expr ) | ^( '>=' s1= expr s2= expr ) | ^( '<=' s1= expr s2= expr ) | ^( '>' s1= expr s2= expr ) | ^( '<' s1= expr s2= expr ) );
+	// cTree.g:27:1: boolexpr : ( ^( '==' s1= expr s2= expr ) | ^( '!=' s1= expr s2= expr ) | ^( '>=' s1= expr s2= expr ) | ^( '<=' s1= expr s2= expr ) | ^( '>' s1= expr s2= expr ) | ^( '<' s1= expr s2= expr ) );
 	public final cTree.boolexpr_return boolexpr() throws RecognitionException {
 		cTree.boolexpr_return retval = new cTree.boolexpr_return();
 		retval.start = input.LT(1);
@@ -139,7 +140,7 @@ public class cTree extends TreeParser {
 		TreeRuleReturnScope s2 =null;
 
 		try {
-			// cTree.g:26:10: ( ^( '==' s1= expr s2= expr ) | ^( '!=' s1= expr s2= expr ) | ^( '>=' s1= expr s2= expr ) | ^( '<=' s1= expr s2= expr ) | ^( '>' s1= expr s2= expr ) | ^( '<' s1= expr s2= expr ) )
+			// cTree.g:27:10: ( ^( '==' s1= expr s2= expr ) | ^( '!=' s1= expr s2= expr ) | ^( '>=' s1= expr s2= expr ) | ^( '<=' s1= expr s2= expr ) | ^( '>' s1= expr s2= expr ) | ^( '<' s1= expr s2= expr ) )
 			int alt1=6;
 			switch ( input.LA(1) ) {
 			case 38:
@@ -180,7 +181,7 @@ public class cTree extends TreeParser {
 			}
 			switch (alt1) {
 				case 1 :
-					// cTree.g:26:12: ^( '==' s1= expr s2= expr )
+					// cTree.g:27:12: ^( '==' s1= expr s2= expr )
 					{
 					match(input,38,FOLLOW_38_in_boolexpr42); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -199,7 +200,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// cTree.g:29:4: ^( '!=' s1= expr s2= expr )
+					// cTree.g:30:4: ^( '!=' s1= expr s2= expr )
 					{
 					match(input,27,FOLLOW_27_in_boolexpr60); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -218,7 +219,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 3 :
-					// cTree.g:32:4: ^( '>=' s1= expr s2= expr )
+					// cTree.g:33:4: ^( '>=' s1= expr s2= expr )
 					{
 					match(input,40,FOLLOW_40_in_boolexpr78); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -237,7 +238,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 4 :
-					// cTree.g:35:4: ^( '<=' s1= expr s2= expr )
+					// cTree.g:36:4: ^( '<=' s1= expr s2= expr )
 					{
 					match(input,36,FOLLOW_36_in_boolexpr96); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -256,7 +257,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 5 :
-					// cTree.g:38:4: ^( '>' s1= expr s2= expr )
+					// cTree.g:39:4: ^( '>' s1= expr s2= expr )
 					{
 					match(input,39,FOLLOW_39_in_boolexpr114); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -275,7 +276,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 6 :
-					// cTree.g:41:4: ^( '<' s1= expr s2= expr )
+					// cTree.g:42:4: ^( '<' s1= expr s2= expr )
 					{
 					match(input,35,FOLLOW_35_in_boolexpr132); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -316,7 +317,7 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "expr"
-	// cTree.g:45:1: expr : ( ^( '+' s1= expr s2= expr ) | ^( '-' s1= expr s2= expr ) | ^( '*' s1= expr s2= expr ) | ^( '/' s1= expr s2= expr ) | INT | FLOAT | ID | callfunc );
+	// cTree.g:46:1: expr : ( ^( '+' s1= expr s2= expr ) | ^( '-' s1= expr s2= expr ) | ^( '*' s1= expr s2= expr ) | ^( '/' s1= expr s2= expr ) | INT | FLOAT | ID | callfunc );
 	public final cTree.expr_return expr() throws RecognitionException {
 		cTree.expr_return retval = new cTree.expr_return();
 		retval.start = input.LT(1);
@@ -328,7 +329,7 @@ public class cTree extends TreeParser {
 		TreeRuleReturnScope s2 =null;
 
 		try {
-			// cTree.g:45:6: ( ^( '+' s1= expr s2= expr ) | ^( '-' s1= expr s2= expr ) | ^( '*' s1= expr s2= expr ) | ^( '/' s1= expr s2= expr ) | INT | FLOAT | ID | callfunc )
+			// cTree.g:46:6: ( ^( '+' s1= expr s2= expr ) | ^( '-' s1= expr s2= expr ) | ^( '*' s1= expr s2= expr ) | ^( '/' s1= expr s2= expr ) | INT | FLOAT | ID | callfunc )
 			int alt2=8;
 			switch ( input.LA(1) ) {
 			case 31:
@@ -379,7 +380,7 @@ public class cTree extends TreeParser {
 			}
 			switch (alt2) {
 				case 1 :
-					// cTree.g:45:8: ^( '+' s1= expr s2= expr )
+					// cTree.g:46:8: ^( '+' s1= expr s2= expr )
 					{
 					match(input,31,FOLLOW_31_in_expr154); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -397,7 +398,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// cTree.g:46:4: ^( '-' s1= expr s2= expr )
+					// cTree.g:47:4: ^( '-' s1= expr s2= expr )
 					{
 					match(input,33,FOLLOW_33_in_expr170); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -415,7 +416,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 3 :
-					// cTree.g:47:4: ^( '*' s1= expr s2= expr )
+					// cTree.g:48:4: ^( '*' s1= expr s2= expr )
 					{
 					match(input,30,FOLLOW_30_in_expr186); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -433,7 +434,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 4 :
-					// cTree.g:48:4: ^( '/' s1= expr s2= expr )
+					// cTree.g:49:4: ^( '/' s1= expr s2= expr )
 					{
 					match(input,34,FOLLOW_34_in_expr202); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -451,28 +452,28 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 5 :
-					// cTree.g:49:4: INT
+					// cTree.g:50:4: INT
 					{
 					INT1=(CommonTree)match(input,INT,FOLLOW_INT_in_expr217); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {text[index++]="mov eax,"+INT1+"";text[index++]="push rax";}
 					}
 					break;
 				case 6 :
-					// cTree.g:50:4: FLOAT
+					// cTree.g:51:4: FLOAT
 					{
 					FLOAT2=(CommonTree)match(input,FLOAT,FOLLOW_FLOAT_in_expr223); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {text[index++]="mov eax,"+FLOAT2+"";text[index++]=" push rax";}
 					}
 					break;
 				case 7 :
-					// cTree.g:51:4: ID
+					// cTree.g:52:4: ID
 					{
 					ID3=(CommonTree)match(input,ID,FOLLOW_ID_in_expr229); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {text[index++]="mov eax,["+ID3+"]";text[index++]="push rax";}
 					}
 					break;
 				case 8 :
-					// cTree.g:52:4: callfunc
+					// cTree.g:53:4: callfunc
 					{
 					pushFollow(FOLLOW_callfunc_in_expr235);
 					callfunc();
@@ -504,7 +505,7 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "declarevar"
-	// cTree.g:56:1: declarevar : ( ^( 'int' ID ) | ^( 'float' ID ) );
+	// cTree.g:57:1: declarevar : ( ^( 'int' ID ) | ^( 'float' ID ) );
 	public final cTree.declarevar_return declarevar() throws RecognitionException {
 		cTree.declarevar_return retval = new cTree.declarevar_return();
 		retval.start = input.LT(1);
@@ -513,7 +514,7 @@ public class cTree extends TreeParser {
 		CommonTree ID5=null;
 
 		try {
-			// cTree.g:56:12: ( ^( 'int' ID ) | ^( 'float' ID ) )
+			// cTree.g:57:12: ( ^( 'int' ID ) | ^( 'float' ID ) )
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0==45) ) {
@@ -532,7 +533,7 @@ public class cTree extends TreeParser {
 
 			switch (alt3) {
 				case 1 :
-					// cTree.g:56:14: ^( 'int' ID )
+					// cTree.g:57:14: ^( 'int' ID )
 					{
 					match(input,45,FOLLOW_45_in_declarevar249); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -543,7 +544,7 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// cTree.g:57:4: ^( 'float' ID )
+					// cTree.g:58:4: ^( 'float' ID )
 					{
 					match(input,42,FOLLOW_42_in_declarevar259); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -576,7 +577,7 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "givevalue"
-	// cTree.g:60:1: givevalue : ^( '=' ID expr ) ;
+	// cTree.g:61:1: givevalue : ^( '=' ID expr ) ;
 	public final cTree.givevalue_return givevalue() throws RecognitionException {
 		cTree.givevalue_return retval = new cTree.givevalue_return();
 		retval.start = input.LT(1);
@@ -584,8 +585,8 @@ public class cTree extends TreeParser {
 		CommonTree ID6=null;
 
 		try {
-			// cTree.g:60:11: ( ^( '=' ID expr ) )
-			// cTree.g:60:13: ^( '=' ID expr )
+			// cTree.g:61:11: ( ^( '=' ID expr ) )
+			// cTree.g:61:13: ^( '=' ID expr )
 			{
 			match(input,37,FOLLOW_37_in_givevalue275); if (state.failed) return retval;
 			match(input, Token.DOWN, null); if (state.failed) return retval;
@@ -620,17 +621,18 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "ifstat"
-	// cTree.g:63:1: ifstat options {backtrack=true; } : ( ^( IF boolexpr (s= stat )* ) | ^( IF boolexpr (s1= stat )* ELSE (s2= stat )* ) );
+	// cTree.g:64:1: ifstat options {backtrack=true; } : ( ^( IF index_if= INT boolexpr (s= stat )* ) | ^( IF index_if= INT boolexpr (s1= stat )* ELSE (s2= stat )* ) );
 	public final cTree.ifstat_return ifstat() throws RecognitionException {
 		cTree.ifstat_return retval = new cTree.ifstat_return();
 		retval.start = input.LT(1);
 
+		CommonTree index_if=null;
 		TreeRuleReturnScope s =null;
 		TreeRuleReturnScope s1 =null;
 		TreeRuleReturnScope s2 =null;
 
 		try {
-			// cTree.g:64:2: ( ^( IF boolexpr (s= stat )* ) | ^( IF boolexpr (s1= stat )* ELSE (s2= stat )* ) )
+			// cTree.g:65:2: ( ^( IF index_if= INT boolexpr (s= stat )* ) | ^( IF index_if= INT boolexpr (s1= stat )* ELSE (s2= stat )* ) )
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0==IF) ) {
@@ -653,16 +655,17 @@ public class cTree extends TreeParser {
 
 			switch (alt7) {
 				case 1 :
-					// cTree.g:64:4: ^( IF boolexpr (s= stat )* )
+					// cTree.g:65:4: ^( IF index_if= INT boolexpr (s= stat )* )
 					{
 					match(input,IF,FOLLOW_IF_in_ifstat301); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_boolexpr_in_ifstat303);
+					index_if=(CommonTree)match(input,INT,FOLLOW_INT_in_ifstat305); if (state.failed) return retval;
+					pushFollow(FOLLOW_boolexpr_in_ifstat307);
 					boolexpr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if0"+labelindex_if+"";}
-					// cTree.g:65:4: (s= stat )*
+					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if0"+index_if+"";}
+					// cTree.g:66:4: (s= stat )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -673,9 +676,9 @@ public class cTree extends TreeParser {
 
 						switch (alt4) {
 						case 1 :
-							// cTree.g:65:4: s= stat
+							// cTree.g:66:4: s= stat
 							{
-							pushFollow(FOLLOW_stat_in_ifstat310);
+							pushFollow(FOLLOW_stat_in_ifstat314);
 							s=stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -687,23 +690,24 @@ public class cTree extends TreeParser {
 						}
 					}
 
-					if ( state.backtracking==0 ) {text[index++]="label_if0"+labelindex+":";}
+					if ( state.backtracking==0 ) {text[index++]="label_if0"+index_if+":";}
 					match(input, Token.UP, null); if (state.failed) return retval;
 
 					if ( state.backtracking==0 ) {labelindex_if++;}
 					}
 					break;
 				case 2 :
-					// cTree.g:66:4: ^( IF boolexpr (s1= stat )* ELSE (s2= stat )* )
+					// cTree.g:67:4: ^( IF index_if= INT boolexpr (s1= stat )* ELSE (s2= stat )* )
 					{
-					match(input,IF,FOLLOW_IF_in_ifstat320); if (state.failed) return retval;
+					match(input,IF,FOLLOW_IF_in_ifstat324); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_boolexpr_in_ifstat322);
+					index_if=(CommonTree)match(input,INT,FOLLOW_INT_in_ifstat328); if (state.failed) return retval;
+					pushFollow(FOLLOW_boolexpr_in_ifstat330);
 					boolexpr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if1"+labelindex_if+"";}
-					// cTree.g:67:5: (s1= stat )*
+					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if1"+index_if+"";}
+					// cTree.g:68:5: (s1= stat )*
 					loop5:
 					while (true) {
 						int alt5=2;
@@ -714,9 +718,9 @@ public class cTree extends TreeParser {
 
 						switch (alt5) {
 						case 1 :
-							// cTree.g:67:5: s1= stat
+							// cTree.g:68:5: s1= stat
 							{
-							pushFollow(FOLLOW_stat_in_ifstat329);
+							pushFollow(FOLLOW_stat_in_ifstat337);
 							s1=stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -728,9 +732,9 @@ public class cTree extends TreeParser {
 						}
 					}
 
-					if ( state.backtracking==0 ) {text[index++]="jmp label_if2"+labelindex_if+"";text[index++]="label1_if1"+labelindex_if+":";}
-					match(input,ELSE,FOLLOW_ELSE_in_ifstat336); if (state.failed) return retval;
-					// cTree.g:69:6: (s2= stat )*
+					if ( state.backtracking==0 ) {text[index++]="jmp label_if2"+index_if+"";text[index++]="label_if1"+index_if+":";}
+					match(input,ELSE,FOLLOW_ELSE_in_ifstat344); if (state.failed) return retval;
+					// cTree.g:70:6: (s2= stat )*
 					loop6:
 					while (true) {
 						int alt6=2;
@@ -741,9 +745,9 @@ public class cTree extends TreeParser {
 
 						switch (alt6) {
 						case 1 :
-							// cTree.g:69:6: s2= stat
+							// cTree.g:70:6: s2= stat
 							{
-							pushFollow(FOLLOW_stat_in_ifstat344);
+							pushFollow(FOLLOW_stat_in_ifstat352);
 							s2=stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -755,7 +759,7 @@ public class cTree extends TreeParser {
 						}
 					}
 
-					if ( state.backtracking==0 ) {text[index++]="label_if2"+labelindex_if+":";}
+					if ( state.backtracking==0 ) {text[index++]="label_if2"+index_if+":";}
 					match(input, Token.UP, null); if (state.failed) return retval;
 
 					if ( state.backtracking==0 ) {labelindex_if++;}
@@ -784,24 +788,27 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "whilestat"
-	// cTree.g:73:1: whilestat : ^( 'while' boolexpr ( stat )* ) ;
+	// cTree.g:74:1: whilestat : ^( 'while' index_while= INT boolexpr ( stat )* ) ;
 	public final cTree.whilestat_return whilestat() throws RecognitionException {
 		cTree.whilestat_return retval = new cTree.whilestat_return();
 		retval.start = input.LT(1);
 
+		CommonTree index_while=null;
+
 		try {
-			// cTree.g:73:11: ( ^( 'while' boolexpr ( stat )* ) )
-			// cTree.g:73:13: ^( 'while' boolexpr ( stat )* )
+			// cTree.g:74:11: ( ^( 'while' index_while= INT boolexpr ( stat )* ) )
+			// cTree.g:74:13: ^( 'while' index_while= INT boolexpr ( stat )* )
 			{
-			match(input,48,FOLLOW_48_in_whilestat362); if (state.failed) return retval;
-			if ( state.backtracking==0 ) {text[index++]="label_while"+labelindex_while+":";}
+			match(input,48,FOLLOW_48_in_whilestat370); if (state.failed) return retval;
 			match(input, Token.DOWN, null); if (state.failed) return retval;
-			pushFollow(FOLLOW_boolexpr_in_whilestat365);
+			index_while=(CommonTree)match(input,INT,FOLLOW_INT_in_whilestat374); if (state.failed) return retval;
+			if ( state.backtracking==0 ) {text[index++]="label_while"+index_while+":";}
+			pushFollow(FOLLOW_boolexpr_in_whilestat378);
 			boolexpr();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_while2"+labelindex_while+"";}
-			// cTree.g:74:2: ( stat )*
+			if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_while2"+index_while+"";}
+			// cTree.g:75:2: ( stat )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -812,9 +819,9 @@ public class cTree extends TreeParser {
 
 				switch (alt8) {
 				case 1 :
-					// cTree.g:74:2: stat
+					// cTree.g:75:2: stat
 					{
-					pushFollow(FOLLOW_stat_in_whilestat369);
+					pushFollow(FOLLOW_stat_in_whilestat382);
 					stat();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -826,10 +833,9 @@ public class cTree extends TreeParser {
 				}
 			}
 
-			if ( state.backtracking==0 ) {text[index++]="jmp label_while"+labelindex_while+"\nlabel_while2"+labelindex_while+":";}
+			if ( state.backtracking==0 ) {text[index++]="jmp label_while"+index_while+"\nlabel_while2"+index_while+":";}
 			match(input, Token.UP, null); if (state.failed) return retval;
 
-			if ( state.backtracking==0 ) {labelindex_while++;}
 			}
 
 		}
@@ -853,33 +859,35 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "forstat"
-	// cTree.g:77:1: forstat : ^( 'for' s1= givevalue s2= boolexpr (s4= stat )* s3= givevalue ) ;
+	// cTree.g:78:1: forstat : ^( 'for' index_for= INT s1= givevalue s2= boolexpr (s4= stat )* s3= givevalue ) ;
 	public final cTree.forstat_return forstat() throws RecognitionException {
 		cTree.forstat_return retval = new cTree.forstat_return();
 		retval.start = input.LT(1);
 
+		CommonTree index_for=null;
 		TreeRuleReturnScope s1 =null;
 		TreeRuleReturnScope s2 =null;
 		TreeRuleReturnScope s4 =null;
 		TreeRuleReturnScope s3 =null;
 
 		try {
-			// cTree.g:77:9: ( ^( 'for' s1= givevalue s2= boolexpr (s4= stat )* s3= givevalue ) )
-			// cTree.g:77:11: ^( 'for' s1= givevalue s2= boolexpr (s4= stat )* s3= givevalue )
+			// cTree.g:78:9: ( ^( 'for' index_for= INT s1= givevalue s2= boolexpr (s4= stat )* s3= givevalue ) )
+			// cTree.g:78:11: ^( 'for' index_for= INT s1= givevalue s2= boolexpr (s4= stat )* s3= givevalue )
 			{
-			match(input,43,FOLLOW_43_in_forstat384); if (state.failed) return retval;
+			match(input,43,FOLLOW_43_in_forstat396); if (state.failed) return retval;
 			match(input, Token.DOWN, null); if (state.failed) return retval;
-			pushFollow(FOLLOW_givevalue_in_forstat388);
+			index_for=(CommonTree)match(input,INT,FOLLOW_INT_in_forstat400); if (state.failed) return retval;
+			pushFollow(FOLLOW_givevalue_in_forstat406);
 			s1=givevalue();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) {text[index++]="label_for"+labelindex_for+":";}
-			pushFollow(FOLLOW_boolexpr_in_forstat394);
+			if ( state.backtracking==0 ) {text[index++]="label_for"+index_for+":";}
+			pushFollow(FOLLOW_boolexpr_in_forstat412);
 			s2=boolexpr();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_for2"+labelindex_for+"";}
-			// cTree.g:79:4: (s4= stat )*
+			if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_for2"+index_for+"";}
+			// cTree.g:81:4: (s4= stat )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -890,9 +898,9 @@ public class cTree extends TreeParser {
 
 				switch (alt9) {
 				case 1 :
-					// cTree.g:79:4: s4= stat
+					// cTree.g:81:4: s4= stat
 					{
-					pushFollow(FOLLOW_stat_in_forstat400);
+					pushFollow(FOLLOW_stat_in_forstat418);
 					s4=stat();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -904,14 +912,13 @@ public class cTree extends TreeParser {
 				}
 			}
 
-			pushFollow(FOLLOW_givevalue_in_forstat407);
+			pushFollow(FOLLOW_givevalue_in_forstat425);
 			s3=givevalue();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) {text[index++]="jmp label_for"+labelindex_for+"";text[index++]="label_for2"+labelindex_for+":";}
+			if ( state.backtracking==0 ) {text[index++]="jmp label_for"+index_for+"";text[index++]="label_for2"+index_for+":";}
 			match(input, Token.UP, null); if (state.failed) return retval;
 
-			if ( state.backtracking==0 ) {labelindex_for++;}
 			}
 
 		}
@@ -935,7 +942,7 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "declarefunc"
-	// cTree.g:83:1: declarefunc : ( ^( FUNC1 ID (s1= stat )* ) | ^( FUNC2 ID ( stat )* expr ) | ^( FUNC3 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* ) | ^( FUNC4 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* expr ) );
+	// cTree.g:85:1: declarefunc : ( ^( FUNC1 ID (s1= stat )* ) | ^( FUNC2 ID ( stat )* expr ) | ^( FUNC3 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* ) | ^( FUNC4 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* expr ) );
 	public final cTree.declarefunc_return declarefunc() throws RecognitionException {
 		cTree.declarefunc_return retval = new cTree.declarefunc_return();
 		retval.start = input.LT(1);
@@ -947,7 +954,7 @@ public class cTree extends TreeParser {
 		TreeRuleReturnScope s1 =null;
 
 		try {
-			// cTree.g:84:2: ( ^( FUNC1 ID (s1= stat )* ) | ^( FUNC2 ID ( stat )* expr ) | ^( FUNC3 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* ) | ^( FUNC4 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* expr ) )
+			// cTree.g:86:2: ( ^( FUNC1 ID (s1= stat )* ) | ^( FUNC2 ID ( stat )* expr ) | ^( FUNC3 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* ) | ^( FUNC4 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* expr ) )
 			int alt16=4;
 			switch ( input.LA(1) ) {
 			case FUNC1:
@@ -978,13 +985,13 @@ public class cTree extends TreeParser {
 			}
 			switch (alt16) {
 				case 1 :
-					// cTree.g:84:4: ^( FUNC1 ID (s1= stat )* )
+					// cTree.g:86:4: ^( FUNC1 ID (s1= stat )* )
 					{
-					match(input,FUNC1,FOLLOW_FUNC1_in_declarefunc423); if (state.failed) return retval;
+					match(input,FUNC1,FOLLOW_FUNC1_in_declarefunc440); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					ID7=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc428); if (state.failed) return retval;
+					ID7=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc445); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+ID7+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}
-					// cTree.g:86:5: (s1= stat )*
+					// cTree.g:88:5: (s1= stat )*
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -995,9 +1002,9 @@ public class cTree extends TreeParser {
 
 						switch (alt10) {
 						case 1 :
-							// cTree.g:86:5: s1= stat
+							// cTree.g:88:5: s1= stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc436);
+							pushFollow(FOLLOW_stat_in_declarefunc453);
 							s1=stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1016,13 +1023,13 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// cTree.g:87:4: ^( FUNC2 ID ( stat )* expr )
+					// cTree.g:89:4: ^( FUNC2 ID ( stat )* expr )
 					{
-					match(input,FUNC2,FOLLOW_FUNC2_in_declarefunc447); if (state.failed) return retval;
+					match(input,FUNC2,FOLLOW_FUNC2_in_declarefunc464); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					ID8=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc449); if (state.failed) return retval;
+					ID8=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc466); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {text[index++]="jmp label"+labelindex+"";text[index++]="label_"+ID8+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}
-					// cTree.g:88:3: ( stat )*
+					// cTree.g:90:3: ( stat )*
 					loop11:
 					while (true) {
 						int alt11=2;
@@ -1033,9 +1040,9 @@ public class cTree extends TreeParser {
 
 						switch (alt11) {
 						case 1 :
-							// cTree.g:88:3: stat
+							// cTree.g:90:3: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc454);
+							pushFollow(FOLLOW_stat_in_declarefunc471);
 							stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1047,24 +1054,24 @@ public class cTree extends TreeParser {
 						}
 					}
 
-					pushFollow(FOLLOW_expr_in_declarefunc460);
+					pushFollow(FOLLOW_expr_in_declarefunc477);
 					expr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label"+labelindex+":";}
+					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label"+labelindex+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}
 					match(input, Token.UP, null); if (state.failed) return retval;
 
 					if ( state.backtracking==0 ) {labelindex++;}
 					}
 					break;
 				case 3 :
-					// cTree.g:90:4: ^( FUNC3 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* )
+					// cTree.g:92:4: ^( FUNC3 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* )
 					{
-					match(input,FUNC3,FOLLOW_FUNC3_in_declarefunc469); if (state.failed) return retval;
+					match(input,FUNC3,FOLLOW_FUNC3_in_declarefunc486); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					a=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc473); if (state.failed) return retval;
-					if ( state.backtracking==0 ) {text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+a+":";}
-					// cTree.g:91:2: ( ( 'int' | 'float' ) b= ID )+
+					a=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc490); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {num=0;text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+a+":";}
+					// cTree.g:93:2: ( ( 'int' | 'float' ) b= ID )+
 					int cnt12=0;
 					loop12:
 					while (true) {
@@ -1076,7 +1083,7 @@ public class cTree extends TreeParser {
 
 						switch (alt12) {
 						case 1 :
-							// cTree.g:91:3: ( 'int' | 'float' ) b= ID
+							// cTree.g:93:3: ( 'int' | 'float' ) b= ID
 							{
 							if ( input.LA(1)==42||input.LA(1)==45 ) {
 								input.consume();
@@ -1088,9 +1095,8 @@ public class cTree extends TreeParser {
 								MismatchedSetException mse = new MismatchedSetException(null,input);
 								throw mse;
 							}
-							if ( state.backtracking==0 ) {text[index++]="push rbp";text[index++]="mov rbp,rsp";}
-							b=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc488); if (state.failed) return retval;
-							if ( state.backtracking==0 ) {text[index++]="mov rax,[ rbp+"+8+"+8+"+8*num+"]";text[index++]="mov ["+b+"],rax";num--;data[data_index++]=b+" dd 0";}
+							b=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc504); if (state.failed) return retval;
+							if ( state.backtracking==0 ) {text[index++]="mov rax,[ rbp+"+"+16+";text[index++]="mov ["+b+"],rax";num++;data[data_index++]=b+" dd 0";}
 							}
 							break;
 
@@ -1103,7 +1109,8 @@ public class cTree extends TreeParser {
 						cnt12++;
 					}
 
-					// cTree.g:92:2: ( stat )*
+					if ( state.backtracking==0 ) {for(int i=1;i<=num;i++){text[index-2*i] = text[index-2*i]+ 8*i+"]";}}
+					// cTree.g:95:2: ( stat )*
 					loop13:
 					while (true) {
 						int alt13=2;
@@ -1114,9 +1121,9 @@ public class cTree extends TreeParser {
 
 						switch (alt13) {
 						case 1 :
-							// cTree.g:92:2: stat
+							// cTree.g:95:2: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc495);
+							pushFollow(FOLLOW_stat_in_declarefunc521);
 							stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1135,14 +1142,13 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 4 :
-					// cTree.g:94:4: ^( FUNC4 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* expr )
+					// cTree.g:97:4: ^( FUNC4 a= ID ( ( 'int' | 'float' ) b= ID )+ ( stat )* expr )
 					{
-					match(input,FUNC4,FOLLOW_FUNC4_in_declarefunc514); if (state.failed) return retval;
-					if ( state.backtracking==0 ) {num=0;}
+					match(input,FUNC4,FOLLOW_FUNC4_in_declarefunc540); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					a=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc519); if (state.failed) return retval;
-					if ( state.backtracking==0 ) {text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+a+":";}
-					// cTree.g:95:3: ( ( 'int' | 'float' ) b= ID )+
+					a=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc544); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {num=0;text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+a+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}
+					// cTree.g:98:3: ( ( 'int' | 'float' ) b= ID )+
 					int cnt14=0;
 					loop14:
 					while (true) {
@@ -1154,7 +1160,7 @@ public class cTree extends TreeParser {
 
 						switch (alt14) {
 						case 1 :
-							// cTree.g:95:4: ( 'int' | 'float' ) b= ID
+							// cTree.g:98:4: ( 'int' | 'float' ) b= ID
 							{
 							if ( input.LA(1)==42||input.LA(1)==45 ) {
 								input.consume();
@@ -1166,9 +1172,8 @@ public class cTree extends TreeParser {
 								MismatchedSetException mse = new MismatchedSetException(null,input);
 								throw mse;
 							}
-							if ( state.backtracking==0 ) {text[index++]="push rbp";text[index++]="mov rbp,rsp";}
-							b=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc534); if (state.failed) return retval;
-							if ( state.backtracking==0 ) {text[index++]="mov rax,[ rbp+"+8+"+"+8*num+"]";text[index++]="mov ["+b+"],rax";num--;data[data_index++]=b+" dd 0";}
+							b=(CommonTree)match(input,ID,FOLLOW_ID_in_declarefunc558); if (state.failed) return retval;
+							if ( state.backtracking==0 ) {text[index++]="mov rax,[ rbp+"+16+"+";text[index++]="mov ["+b+"],rax";num++;data[data_index++]=b+" dd 0";}
 							}
 							break;
 
@@ -1181,7 +1186,8 @@ public class cTree extends TreeParser {
 						cnt14++;
 					}
 
-					// cTree.g:96:10: ( stat )*
+					if ( state.backtracking==0 ) {for(int i=1;i<=num;i++){text[index-2*i]=text[index-2*i]+8*i+"]";}}
+					// cTree.g:100:17: ( stat )*
 					loop15:
 					while (true) {
 						int alt15=2;
@@ -1192,9 +1198,9 @@ public class cTree extends TreeParser {
 
 						switch (alt15) {
 						case 1 :
-							// cTree.g:96:10: stat
+							// cTree.g:100:17: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc548);
+							pushFollow(FOLLOW_stat_in_declarefunc606);
 							stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1206,11 +1212,11 @@ public class cTree extends TreeParser {
 						}
 					}
 
-					pushFollow(FOLLOW_expr_in_declarefunc554);
+					pushFollow(FOLLOW_expr_in_declarefunc612);
 					expr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label"+labelindex_func+":";}
+					if ( state.backtracking==0 ) {text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label_func"+labelindex_func+":";}
 					match(input, Token.UP, null); if (state.failed) return retval;
 
 					if ( state.backtracking==0 ) {labelindex++;}
@@ -1239,7 +1245,7 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "callfunc"
-	// cTree.g:101:1: callfunc : ( ^( CALL ID ) | ^( CALL ID ( expr )+ ) );
+	// cTree.g:105:1: callfunc : ( ^( CALL ID ) | ^( CALL ID ( expr )+ ) );
 	public final cTree.callfunc_return callfunc() throws RecognitionException {
 		cTree.callfunc_return retval = new cTree.callfunc_return();
 		retval.start = input.LT(1);
@@ -1248,7 +1254,7 @@ public class cTree extends TreeParser {
 		CommonTree ID10=null;
 
 		try {
-			// cTree.g:101:10: ( ^( CALL ID ) | ^( CALL ID ( expr )+ ) )
+			// cTree.g:105:10: ( ^( CALL ID ) | ^( CALL ID ( expr )+ ) )
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0==CALL) ) {
@@ -1322,24 +1328,24 @@ public class cTree extends TreeParser {
 
 			switch (alt18) {
 				case 1 :
-					// cTree.g:101:12: ^( CALL ID )
+					// cTree.g:105:12: ^( CALL ID )
 					{
-					match(input,CALL,FOLLOW_CALL_in_callfunc578); if (state.failed) return retval;
+					match(input,CALL,FOLLOW_CALL_in_callfunc636); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					ID9=(CommonTree)match(input,ID,FOLLOW_ID_in_callfunc580); if (state.failed) return retval;
+					ID9=(CommonTree)match(input,ID,FOLLOW_ID_in_callfunc638); if (state.failed) return retval;
 					match(input, Token.UP, null); if (state.failed) return retval;
 
 					if ( state.backtracking==0 ) {text[index++]="call label_"+ID9+"";}
 					}
 					break;
 				case 2 :
-					// cTree.g:102:4: ^( CALL ID ( expr )+ )
+					// cTree.g:106:4: ^( CALL ID ( expr )+ )
 					{
-					match(input,CALL,FOLLOW_CALL_in_callfunc588); if (state.failed) return retval;
+					match(input,CALL,FOLLOW_CALL_in_callfunc646); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					ID10=(CommonTree)match(input,ID,FOLLOW_ID_in_callfunc590); if (state.failed) return retval;
+					ID10=(CommonTree)match(input,ID,FOLLOW_ID_in_callfunc648); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {num=0;}
-					// cTree.g:102:22: ( expr )+
+					// cTree.g:106:22: ( expr )+
 					int cnt17=0;
 					loop17:
 					while (true) {
@@ -1351,9 +1357,9 @@ public class cTree extends TreeParser {
 
 						switch (alt17) {
 						case 1 :
-							// cTree.g:102:23: expr
+							// cTree.g:106:23: expr
 							{
-							pushFollow(FOLLOW_expr_in_callfunc594);
+							pushFollow(FOLLOW_expr_in_callfunc652);
 							expr();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1398,13 +1404,13 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "stat"
-	// cTree.g:105:1: stat : ( ^( DECLAREVAR declarevar ) | ^( GIVEVALUE givevalue ) | ^( IFSTAT ifstat ) | ^( FORSTAT forstat ) | ^( WHILESTAT whilestat ) | ^( DECLAREFUNC declarefunc ) | ^( CALLFUNC callfunc ) );
+	// cTree.g:109:1: stat : ( ^( DECLAREVAR declarevar ) | ^( GIVEVALUE givevalue ) | ^( IFSTAT ifstat ) | ^( FORSTAT forstat ) | ^( WHILESTAT whilestat ) | ^( DECLAREFUNC declarefunc ) | ^( CALLFUNC callfunc ) );
 	public final cTree.stat_return stat() throws RecognitionException {
 		cTree.stat_return retval = new cTree.stat_return();
 		retval.start = input.LT(1);
 
 		try {
-			// cTree.g:105:6: ( ^( DECLAREVAR declarevar ) | ^( GIVEVALUE givevalue ) | ^( IFSTAT ifstat ) | ^( FORSTAT forstat ) | ^( WHILESTAT whilestat ) | ^( DECLAREFUNC declarefunc ) | ^( CALLFUNC callfunc ) )
+			// cTree.g:109:6: ( ^( DECLAREVAR declarevar ) | ^( GIVEVALUE givevalue ) | ^( IFSTAT ifstat ) | ^( FORSTAT forstat ) | ^( WHILESTAT whilestat ) | ^( DECLAREFUNC declarefunc ) | ^( CALLFUNC callfunc ) )
 			int alt19=7;
 			switch ( input.LA(1) ) {
 			case DECLAREVAR:
@@ -1450,11 +1456,11 @@ public class cTree extends TreeParser {
 			}
 			switch (alt19) {
 				case 1 :
-					// cTree.g:105:8: ^( DECLAREVAR declarevar )
+					// cTree.g:109:8: ^( DECLAREVAR declarevar )
 					{
-					match(input,DECLAREVAR,FOLLOW_DECLAREVAR_in_stat610); if (state.failed) return retval;
+					match(input,DECLAREVAR,FOLLOW_DECLAREVAR_in_stat668); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_declarevar_in_stat612);
+					pushFollow(FOLLOW_declarevar_in_stat670);
 					declarevar();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1463,11 +1469,11 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// cTree.g:106:4: ^( GIVEVALUE givevalue )
+					// cTree.g:110:4: ^( GIVEVALUE givevalue )
 					{
-					match(input,GIVEVALUE,FOLLOW_GIVEVALUE_in_stat619); if (state.failed) return retval;
+					match(input,GIVEVALUE,FOLLOW_GIVEVALUE_in_stat677); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_givevalue_in_stat621);
+					pushFollow(FOLLOW_givevalue_in_stat679);
 					givevalue();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1476,11 +1482,11 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 3 :
-					// cTree.g:107:4: ^( IFSTAT ifstat )
+					// cTree.g:111:4: ^( IFSTAT ifstat )
 					{
-					match(input,IFSTAT,FOLLOW_IFSTAT_in_stat628); if (state.failed) return retval;
+					match(input,IFSTAT,FOLLOW_IFSTAT_in_stat686); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_ifstat_in_stat630);
+					pushFollow(FOLLOW_ifstat_in_stat688);
 					ifstat();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1489,11 +1495,11 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 4 :
-					// cTree.g:108:4: ^( FORSTAT forstat )
+					// cTree.g:112:4: ^( FORSTAT forstat )
 					{
-					match(input,FORSTAT,FOLLOW_FORSTAT_in_stat637); if (state.failed) return retval;
+					match(input,FORSTAT,FOLLOW_FORSTAT_in_stat695); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_forstat_in_stat639);
+					pushFollow(FOLLOW_forstat_in_stat697);
 					forstat();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1502,11 +1508,11 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 5 :
-					// cTree.g:109:4: ^( WHILESTAT whilestat )
+					// cTree.g:113:4: ^( WHILESTAT whilestat )
 					{
-					match(input,WHILESTAT,FOLLOW_WHILESTAT_in_stat646); if (state.failed) return retval;
+					match(input,WHILESTAT,FOLLOW_WHILESTAT_in_stat704); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_whilestat_in_stat648);
+					pushFollow(FOLLOW_whilestat_in_stat706);
 					whilestat();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1515,11 +1521,11 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 6 :
-					// cTree.g:110:4: ^( DECLAREFUNC declarefunc )
+					// cTree.g:114:4: ^( DECLAREFUNC declarefunc )
 					{
-					match(input,DECLAREFUNC,FOLLOW_DECLAREFUNC_in_stat655); if (state.failed) return retval;
+					match(input,DECLAREFUNC,FOLLOW_DECLAREFUNC_in_stat713); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_declarefunc_in_stat657);
+					pushFollow(FOLLOW_declarefunc_in_stat715);
 					declarefunc();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1528,11 +1534,11 @@ public class cTree extends TreeParser {
 					}
 					break;
 				case 7 :
-					// cTree.g:111:4: ^( CALLFUNC callfunc )
+					// cTree.g:115:4: ^( CALLFUNC callfunc )
 					{
-					match(input,CALLFUNC,FOLLOW_CALLFUNC_in_stat664); if (state.failed) return retval;
+					match(input,CALLFUNC,FOLLOW_CALLFUNC_in_stat722); if (state.failed) return retval;
 					match(input, Token.DOWN, null); if (state.failed) return retval;
-					pushFollow(FOLLOW_callfunc_in_stat666);
+					pushFollow(FOLLOW_callfunc_in_stat724);
 					callfunc();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1563,19 +1569,19 @@ public class cTree extends TreeParser {
 
 
 	// $ANTLR start "prog"
-	// cTree.g:114:1: prog : ^( PROG ( stat )* ) ;
+	// cTree.g:118:1: prog : ^( PROG ( stat )* ) ;
 	public final cTree.prog_return prog() throws RecognitionException {
 		cTree.prog_return retval = new cTree.prog_return();
 		retval.start = input.LT(1);
 
 		try {
-			// cTree.g:114:6: ( ^( PROG ( stat )* ) )
-			// cTree.g:114:8: ^( PROG ( stat )* )
+			// cTree.g:118:6: ( ^( PROG ( stat )* ) )
+			// cTree.g:118:8: ^( PROG ( stat )* )
 			{
-			match(input,PROG,FOLLOW_PROG_in_prog678); if (state.failed) return retval;
+			match(input,PROG,FOLLOW_PROG_in_prog736); if (state.failed) return retval;
 			if ( input.LA(1)==Token.DOWN ) {
 				match(input, Token.DOWN, null); if (state.failed) return retval;
-				// cTree.g:114:15: ( stat )*
+				// cTree.g:118:15: ( stat )*
 				loop20:
 				while (true) {
 					int alt20=2;
@@ -1586,9 +1592,9 @@ public class cTree extends TreeParser {
 
 					switch (alt20) {
 					case 1 :
-						// cTree.g:114:15: stat
+						// cTree.g:118:15: stat
 						{
-						pushFollow(FOLLOW_stat_in_prog680);
+						pushFollow(FOLLOW_stat_in_prog738);
 						stat();
 						state._fsp--;
 						if (state.failed) return retval;
@@ -1604,7 +1610,7 @@ public class cTree extends TreeParser {
 			}
 
 			if ( state.backtracking==0 ) {
-			                System.out.println("section .data\nt resb 100\nbuffer db 0 ,0,0");
+			                System.out.println("section .data\nt resb 100\nbuffer db 10 ,0,0");
 			                for(int i=0;i<data_index;i++){
 			                        System.out.println(data[i]);                
 			                }                
@@ -1612,7 +1618,7 @@ public class cTree extends TreeParser {
 			                for(int i=0;i<index;i++){
 			                        System.out.println(text[i]);                
 			                }
-			                System.out.println("call label_main\njmp label_a\nlabel_print:\nxor rcx,rcx\nxor rax,rax\npush rbp\nmov rbp,rsp\nmov rax,[rbp+8+8*2]\nlabel_prog:\nmov rbx,10\ndiv bl\nadd ah,30h\nmov ebx,buffer\nsub ebx,ecx\ndec ebx\nmov [ebx],ah\nmov ah,0\ninc rcx\ncmp rax,0\njnz label_prog\nmov ax,4\nmov ebx,1\nmov edx,ecx\nmov ecx,buffer\nsub ecx,edx\nint 80h\nmov rsp,rbp\npop rbp\nret\nlabel_a:\nmov ax,1\nmov ebx,0\nint 0x80\n");       
+			                System.out.println("call label_main\njmp label_a\nlabel_print:\nxor rcx,rcx\nxor rax,rax\npush rbp\nmov rbp,rsp\nmov rax,[rbp+8+8*2]\nlabel_prog:\nmov rbx,10\ndiv bl\nadd ah,30h\nmov ebx,buffer\nsub ebx,ecx\ndec ebx\nmov [ebx],ah\nmov ah,0\ninc rcx\ncmp rax,0\njnz label_prog\nmov ax,4\nmov ebx,1\nmov edx,ecx\nmov ecx,buffer\nsub ecx,edx\ninc edx\nint 80h\nmov rsp,rbp\npop rbp\nret\nlabel_a:\nmov ax,1\nmov ebx,0\nint 0x80\n");       
 			        }
 			}
 
@@ -1630,18 +1636,20 @@ public class cTree extends TreeParser {
 
 	// $ANTLR start synpred1_cTree
 	public final void synpred1_cTree_fragment() throws RecognitionException {
+		CommonTree index_if=null;
 		TreeRuleReturnScope s =null;
 
-		// cTree.g:64:4: ( ^( IF boolexpr (s= stat )* ) )
-		// cTree.g:64:4: ^( IF boolexpr (s= stat )* )
+		// cTree.g:65:4: ( ^( IF index_if= INT boolexpr (s= stat )* ) )
+		// cTree.g:65:4: ^( IF index_if= INT boolexpr (s= stat )* )
 		{
 		match(input,IF,FOLLOW_IF_in_synpred1_cTree301); if (state.failed) return;
 		match(input, Token.DOWN, null); if (state.failed) return;
-		pushFollow(FOLLOW_boolexpr_in_synpred1_cTree303);
+		index_if=(CommonTree)match(input,INT,FOLLOW_INT_in_synpred1_cTree305); if (state.failed) return;
+		pushFollow(FOLLOW_boolexpr_in_synpred1_cTree307);
 		boolexpr();
 		state._fsp--;
 		if (state.failed) return;
-		// cTree.g:65:4: (s= stat )*
+		// cTree.g:66:4: (s= stat )*
 		loop21:
 		while (true) {
 			int alt21=2;
@@ -1652,9 +1660,9 @@ public class cTree extends TreeParser {
 
 			switch (alt21) {
 			case 1 :
-				// cTree.g:65:4: s= stat
+				// cTree.g:66:4: s= stat
 				{
-				pushFollow(FOLLOW_stat_in_synpred1_cTree310);
+				pushFollow(FOLLOW_stat_in_synpred1_cTree314);
 				s=stat();
 				state._fsp--;
 				if (state.failed) return;
@@ -1734,61 +1742,66 @@ public class cTree extends TreeParser {
 	public static final BitSet FOLLOW_ID_in_givevalue277 = new BitSet(new long[]{0x00000006C0481010L});
 	public static final BitSet FOLLOW_expr_in_givevalue279 = new BitSet(new long[]{0x0000000000000008L});
 	public static final BitSet FOLLOW_IF_in_ifstat301 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_boolexpr_in_ifstat303 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_stat_in_ifstat310 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_IF_in_ifstat320 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_boolexpr_in_ifstat322 = new BitSet(new long[]{0x00000000022423A0L});
-	public static final BitSet FOLLOW_stat_in_ifstat329 = new BitSet(new long[]{0x00000000022423A0L});
-	public static final BitSet FOLLOW_ELSE_in_ifstat336 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_stat_in_ifstat344 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_48_in_whilestat362 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_boolexpr_in_whilestat365 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_stat_in_whilestat369 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_43_in_forstat384 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_givevalue_in_forstat388 = new BitSet(new long[]{0x000001D808000000L});
-	public static final BitSet FOLLOW_boolexpr_in_forstat394 = new BitSet(new long[]{0x00000020022421A0L});
-	public static final BitSet FOLLOW_stat_in_forstat400 = new BitSet(new long[]{0x00000020022421A0L});
-	public static final BitSet FOLLOW_givevalue_in_forstat407 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_FUNC1_in_declarefunc423 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_declarefunc428 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_stat_in_declarefunc436 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_FUNC2_in_declarefunc447 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_declarefunc449 = new BitSet(new long[]{0x00000006C26C31B0L});
-	public static final BitSet FOLLOW_stat_in_declarefunc454 = new BitSet(new long[]{0x00000006C26C31B0L});
-	public static final BitSet FOLLOW_expr_in_declarefunc460 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_FUNC3_in_declarefunc469 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_declarefunc473 = new BitSet(new long[]{0x0000240000000000L});
-	public static final BitSet FOLLOW_set_in_declarefunc479 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc488 = new BitSet(new long[]{0x00002400022421A8L});
-	public static final BitSet FOLLOW_stat_in_declarefunc495 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_FUNC4_in_declarefunc514 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_declarefunc519 = new BitSet(new long[]{0x0000240000000000L});
-	public static final BitSet FOLLOW_set_in_declarefunc525 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc534 = new BitSet(new long[]{0x00002406C26C31B0L});
-	public static final BitSet FOLLOW_stat_in_declarefunc548 = new BitSet(new long[]{0x00000006C26C31B0L});
-	public static final BitSet FOLLOW_expr_in_declarefunc554 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_CALL_in_callfunc578 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_callfunc580 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_CALL_in_callfunc588 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_callfunc590 = new BitSet(new long[]{0x00000006C0481010L});
-	public static final BitSet FOLLOW_expr_in_callfunc594 = new BitSet(new long[]{0x00000006C0481018L});
-	public static final BitSet FOLLOW_DECLAREVAR_in_stat610 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_declarevar_in_stat612 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_GIVEVALUE_in_stat619 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_givevalue_in_stat621 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_IFSTAT_in_stat628 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ifstat_in_stat630 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_FORSTAT_in_stat637 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_forstat_in_stat639 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_WHILESTAT_in_stat646 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_whilestat_in_stat648 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_DECLAREFUNC_in_stat655 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_declarefunc_in_stat657 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_CALLFUNC_in_stat664 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_callfunc_in_stat666 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_PROG_in_prog678 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_stat_in_prog680 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_INT_in_ifstat305 = new BitSet(new long[]{0x000001D808000000L});
+	public static final BitSet FOLLOW_boolexpr_in_ifstat307 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_stat_in_ifstat314 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_IF_in_ifstat324 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_INT_in_ifstat328 = new BitSet(new long[]{0x000001D808000000L});
+	public static final BitSet FOLLOW_boolexpr_in_ifstat330 = new BitSet(new long[]{0x00000000022423A0L});
+	public static final BitSet FOLLOW_stat_in_ifstat337 = new BitSet(new long[]{0x00000000022423A0L});
+	public static final BitSet FOLLOW_ELSE_in_ifstat344 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_stat_in_ifstat352 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_48_in_whilestat370 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_INT_in_whilestat374 = new BitSet(new long[]{0x000001D808000000L});
+	public static final BitSet FOLLOW_boolexpr_in_whilestat378 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_stat_in_whilestat382 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_43_in_forstat396 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_INT_in_forstat400 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_givevalue_in_forstat406 = new BitSet(new long[]{0x000001D808000000L});
+	public static final BitSet FOLLOW_boolexpr_in_forstat412 = new BitSet(new long[]{0x00000020022421A0L});
+	public static final BitSet FOLLOW_stat_in_forstat418 = new BitSet(new long[]{0x00000020022421A0L});
+	public static final BitSet FOLLOW_givevalue_in_forstat425 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_FUNC1_in_declarefunc440 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_declarefunc445 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_stat_in_declarefunc453 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_FUNC2_in_declarefunc464 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_declarefunc466 = new BitSet(new long[]{0x00000006C26C31B0L});
+	public static final BitSet FOLLOW_stat_in_declarefunc471 = new BitSet(new long[]{0x00000006C26C31B0L});
+	public static final BitSet FOLLOW_expr_in_declarefunc477 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_FUNC3_in_declarefunc486 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_declarefunc490 = new BitSet(new long[]{0x0000240000000000L});
+	public static final BitSet FOLLOW_set_in_declarefunc496 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc504 = new BitSet(new long[]{0x00002400022421A8L});
+	public static final BitSet FOLLOW_stat_in_declarefunc521 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_FUNC4_in_declarefunc540 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_declarefunc544 = new BitSet(new long[]{0x0000240000000000L});
+	public static final BitSet FOLLOW_set_in_declarefunc550 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc558 = new BitSet(new long[]{0x00002406C26C31B0L});
+	public static final BitSet FOLLOW_stat_in_declarefunc606 = new BitSet(new long[]{0x00000006C26C31B0L});
+	public static final BitSet FOLLOW_expr_in_declarefunc612 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_CALL_in_callfunc636 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_callfunc638 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_CALL_in_callfunc646 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_callfunc648 = new BitSet(new long[]{0x00000006C0481010L});
+	public static final BitSet FOLLOW_expr_in_callfunc652 = new BitSet(new long[]{0x00000006C0481018L});
+	public static final BitSet FOLLOW_DECLAREVAR_in_stat668 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_declarevar_in_stat670 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_GIVEVALUE_in_stat677 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_givevalue_in_stat679 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_IFSTAT_in_stat686 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ifstat_in_stat688 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_FORSTAT_in_stat695 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_forstat_in_stat697 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_WHILESTAT_in_stat704 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_whilestat_in_stat706 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_DECLAREFUNC_in_stat713 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_declarefunc_in_stat715 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_CALLFUNC_in_stat722 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_callfunc_in_stat724 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_PROG_in_prog736 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_stat_in_prog738 = new BitSet(new long[]{0x00000000022421A8L});
 	public static final BitSet FOLLOW_IF_in_synpred1_cTree301 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_boolexpr_in_synpred1_cTree303 = new BitSet(new long[]{0x00000000022421A8L});
-	public static final BitSet FOLLOW_stat_in_synpred1_cTree310 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_INT_in_synpred1_cTree305 = new BitSet(new long[]{0x000001D808000000L});
+	public static final BitSet FOLLOW_boolexpr_in_synpred1_cTree307 = new BitSet(new long[]{0x00000000022421A8L});
+	public static final BitSet FOLLOW_stat_in_synpred1_cTree314 = new BitSet(new long[]{0x00000000022421A8L});
 }

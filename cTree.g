@@ -19,6 +19,7 @@ int     labelindex_bool=0;
 int     labelindex_while=0;
 int     labelindex_for=0;
 int     labelindex_func=0;
+int     deep=0;
 String  []text  =       new     String[1000];
 String  []data  =       new     String[1000];
 }
@@ -61,23 +62,24 @@ givevalue	:	^('='	ID	expr){text[index++]="pop rax";text[index++]="mov ["+$ID+"],
 	;
 	
 ifstat	options{backtrack=true;}
-	:	^(IF	boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if0"+labelindex_if+"";}
-		s=stat*{text[index++]="label_if0"+labelindex+":";}){labelindex_if++;}
-	|	^(IF	boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if1"+labelindex_if+"";}
-		s1=stat*{text[index++]="jmp label_if2"+labelindex_if+"";text[index++]="label1_if1"+labelindex_if+":";}
+	:	^(IF	index_if=INT	boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if0"+$index_if+"";}
+		s=stat*{text[index++]="label_if0"+$index_if+":";}){labelindex_if++;}
+	|	^(IF	index_if=INT	boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_if1"+$index_if+"";}
+		s1=stat*{text[index++]="jmp label_if2"+$index_if+"";text[index++]="label_if1"+$index_if+":";}
 		 ELSE 
-		 s2=stat*{text[index++]="label_if2"+labelindex_if+":";}){labelindex_if++;}
+		 s2=stat*{text[index++]="label_if2"+$index_if+":";}){labelindex_if++;}
 	;
 	
 	
-whilestat	:	^('while'{text[index++]="label_while"+labelindex_while+":";}	boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_while2"+labelindex_while+"";}
-	stat*{text[index++]="jmp label_while"+labelindex_while+"\nlabel_while2"+labelindex_while+":";}){labelindex_while++;}
+whilestat	:	^('while'	index_while=INT	{text[index++]="label_while"+$index_while+":";}	boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_while2"+$index_while+"";}
+	stat*{text[index++]="jmp label_while"+$index_while+"\nlabel_while2"+$index_while+":";})
 	;
 
-forstat	:	^('for'	s1=givevalue{text[index++]="label_for"+labelindex_for+":";}
-	s2=boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_for2"+labelindex_for+"";}
+forstat	:	^('for'	index_for=INT	
+	s1=givevalue{text[index++]="label_for"+$index_for+":";}
+	s2=boolexpr{text[index++]="pop rax";text[index++]="cmp eax,1";text[index++]="jnz label_for2"+$index_for+"";}
 	s4=stat*	
-	s3=givevalue{text[index++]="jmp label_for"+labelindex_for+"";text[index++]="label_for2"+labelindex_for+":";}	){labelindex_for++;}
+	s3=givevalue{text[index++]="jmp label_for"+$index_for+"";text[index++]="label_for2"+$index_for+":";}	)
 	;
 
 declarefunc
@@ -86,15 +88,17 @@ declarefunc
 		s1=stat*	{text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label_func"+labelindex_func+":";}){labelindex_func++;}
 	|	^(FUNC2	ID{text[index++]="jmp label"+labelindex+"";text[index++]="label_"+$ID+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}
 		stat*	
-		expr{text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label"+labelindex+":";}){labelindex++;}
-	|	^(FUNC3	a=ID{text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+$a+":";}	
-	(('int'|'float'){text[index++]="push rbp";text[index++]="mov rbp,rsp";}	b=ID{text[index++]="mov rax,[ rbp+"+8+"+8+"+8*num+"]";text[index++]="mov ["+$b+"],rax";num--;data[data_index++]=$b+" dd 0";})+	
+		expr{text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label"+labelindex+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}){labelindex++;}
+	|	^(FUNC3	a=ID{num=0;text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+$a+":";}	
+	(('int'|'float')	b=ID{text[index++]="mov rax,[ rbp+"+"+16+";text[index++]="mov ["+$b+"],rax";num++;data[data_index++]=$b+" dd 0";})+
+        {for(int i=1;i<=num;i++){text[index-2*i] = text[index-2*i]+ 8*i+"]";}}	
 	stat*{text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label_func"+labelindex_func+":";})
        	{labelindex_func++;}
-	|	^(FUNC4{num=0;}	a=ID{text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+$a+":";}
-		(('int'|'float'){text[index++]="push rbp";text[index++]="mov rbp,rsp";}	b=ID{text[index++]="mov rax,[ rbp+"+8+"+"+8*num+"]";text[index++]="mov ["+$b+"],rax";num--;data[data_index++]=$b+" dd 0";})+
-        	stat*	
-		expr{text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label"+labelindex_func+":";})
+	|	^(FUNC4	a=ID{num=0;text[index++]="jmp label_func"+labelindex_func+"";text[index++]="label_"+$a+":";text[index++]="push rbp";text[index++]="mov rbp,rsp";}
+		(('int'|'float')	b=ID{text[index++]="mov rax,[ rbp+"+16+"+";text[index++]="mov ["+$b+"],rax";num++;data[data_index++]=$b+" dd 0";})+
+                {for(int i=1;i<=num;i++){text[index-2*i]=text[index-2*i]+8*i+"]";}}        	
+                stat*	
+		expr{text[index++]="pop rax";text[index++]="mov rsp,rbp";text[index++]="pop rbp";text[index++]="ret";text[index++]="label_func"+labelindex_func+":";})
         {labelindex++;}
 	;	
 
@@ -113,7 +117,7 @@ stat	:	^(DECLAREVAR	declarevar)
 
 prog	:	^(PROG	stat*)
         {
-                System.out.println("section .data\nt resb 100\nbuffer db 0 ,0,0");
+                System.out.println("section .data\nt resb 100\nbuffer db 10 ,0,0");
                 for(int i=0;i<data_index;i++){
                         System.out.println(data[i]);                
                 }                
@@ -121,6 +125,6 @@ prog	:	^(PROG	stat*)
                 for(int i=0;i<index;i++){
                         System.out.println(text[i]);                
                 }
-                System.out.println("call label_main\njmp label_a\nlabel_print:\nxor rcx,rcx\nxor rax,rax\npush rbp\nmov rbp,rsp\nmov rax,[rbp+8+8*2]\nlabel_prog:\nmov rbx,10\ndiv bl\nadd ah,30h\nmov ebx,buffer\nsub ebx,ecx\ndec ebx\nmov [ebx],ah\nmov ah,0\ninc rcx\ncmp rax,0\njnz label_prog\nmov ax,4\nmov ebx,1\nmov edx,ecx\nmov ecx,buffer\nsub ecx,edx\nint 80h\nmov rsp,rbp\npop rbp\nret\nlabel_a:\nmov ax,1\nmov ebx,0\nint 0x80\n");       
+                System.out.println("call label_main\njmp label_a\nlabel_print:\nxor rcx,rcx\nxor rax,rax\npush rbp\nmov rbp,rsp\nmov rax,[rbp+8+8*2]\nlabel_prog:\nmov rbx,10\ndiv bl\nadd ah,30h\nmov ebx,buffer\nsub ebx,ecx\ndec ebx\nmov [ebx],ah\nmov ah,0\ninc rcx\ncmp rax,0\njnz label_prog\nmov ax,4\nmov ebx,1\nmov edx,ecx\nmov ecx,buffer\nsub ecx,edx\ninc edx\nint 80h\nmov rsp,rbp\npop rbp\nret\nlabel_a:\nmov ax,1\nmov ebx,0\nint 0x80\n");       
         }
 	;

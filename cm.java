@@ -9,13 +9,15 @@ public class cm {
 
     public static void main(String args[]) throws Exception {
 
-        cLexer lex = new cLexer(new ANTLRFileStream("./input.txt"));
+        cLexer lex = new cLexer(new ANTLRFileStream("./input0.txt"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
         cParser par = new cParser(tokens);
 	
 	cParser.prog_return ret = par.prog();
-		
+	
+        CommonTree tt;
+
   	CommonTree t = ret.tree;
         //System.out.println(t.toStringTree());
 	CommonTreeNodeStream nodes = new CommonTreeNodeStream(t);

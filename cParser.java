@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 c.g 2015-11-28 11:12:11
+// $ANTLR 3.5.2 c.g 2015-12-24 14:21:37
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -105,7 +105,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "num"
-	// c.g:23:1: num : ( INT | FLOAT );
+	// c.g:24:1: num : ( INT | FLOAT );
 	public final cParser.num_return num() throws RecognitionException {
 		cParser.num_return retval = new cParser.num_return();
 		retval.start = input.LT(1);
@@ -117,7 +117,7 @@ public class cParser extends Parser {
 		CommonTree set1_tree=null;
 
 		try {
-			// c.g:23:5: ( INT | FLOAT )
+			// c.g:24:5: ( INT | FLOAT )
 			// c.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
@@ -165,7 +165,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "num_type"
-	// c.g:27:1: num_type : ( 'int' | 'float' );
+	// c.g:28:1: num_type : ( 'int' | 'float' );
 	public final cParser.num_type_return num_type() throws RecognitionException {
 		cParser.num_type_return retval = new cParser.num_type_return();
 		retval.start = input.LT(1);
@@ -177,7 +177,7 @@ public class cParser extends Parser {
 		CommonTree set2_tree=null;
 
 		try {
-			// c.g:27:10: ( 'int' | 'float' )
+			// c.g:28:10: ( 'int' | 'float' )
 			// c.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
@@ -225,7 +225,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "boolexpr"
-	// c.g:40:1: boolexpr : expr ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^) expr ;
+	// c.g:41:1: boolexpr : expr ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^) expr ;
 	public final cParser.boolexpr_return boolexpr() throws RecognitionException {
 		cParser.boolexpr_return retval = new cParser.boolexpr_return();
 		retval.start = input.LT(1);
@@ -249,19 +249,19 @@ public class cParser extends Parser {
 		CommonTree string_literal9_tree=null;
 
 		try {
-			// c.g:40:10: ( expr ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^) expr )
-			// c.g:40:12: expr ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^) expr
+			// c.g:41:10: ( expr ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^) expr )
+			// c.g:41:12: expr ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^) expr
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expr_in_boolexpr328);
+			pushFollow(FOLLOW_expr_in_boolexpr329);
 			expr3=expr();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, expr3.getTree());
 
-			// c.g:40:17: ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^)
+			// c.g:41:17: ( '==' ^| '!=' ^| '>' ^| '<' ^| '>=' ^| '<=' ^)
 			int alt1=6;
 			switch ( input.LA(1) ) {
 			case 38:
@@ -302,9 +302,9 @@ public class cParser extends Parser {
 			}
 			switch (alt1) {
 				case 1 :
-					// c.g:40:18: '==' ^
+					// c.g:41:18: '==' ^
 					{
-					string_literal4=(Token)match(input,38,FOLLOW_38_in_boolexpr331); if (state.failed) return retval;
+					string_literal4=(Token)match(input,38,FOLLOW_38_in_boolexpr332); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal4_tree = (CommonTree)adaptor.create(string_literal4);
 					root_0 = (CommonTree)adaptor.becomeRoot(string_literal4_tree, root_0);
@@ -313,9 +313,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:40:24: '!=' ^
+					// c.g:41:24: '!=' ^
 					{
-					string_literal5=(Token)match(input,27,FOLLOW_27_in_boolexpr334); if (state.failed) return retval;
+					string_literal5=(Token)match(input,27,FOLLOW_27_in_boolexpr335); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal5_tree = (CommonTree)adaptor.create(string_literal5);
 					root_0 = (CommonTree)adaptor.becomeRoot(string_literal5_tree, root_0);
@@ -324,9 +324,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 3 :
-					// c.g:40:30: '>' ^
+					// c.g:41:30: '>' ^
 					{
-					char_literal6=(Token)match(input,39,FOLLOW_39_in_boolexpr337); if (state.failed) return retval;
+					char_literal6=(Token)match(input,39,FOLLOW_39_in_boolexpr338); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					char_literal6_tree = (CommonTree)adaptor.create(char_literal6);
 					root_0 = (CommonTree)adaptor.becomeRoot(char_literal6_tree, root_0);
@@ -335,9 +335,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 4 :
-					// c.g:40:35: '<' ^
+					// c.g:41:35: '<' ^
 					{
-					char_literal7=(Token)match(input,35,FOLLOW_35_in_boolexpr340); if (state.failed) return retval;
+					char_literal7=(Token)match(input,35,FOLLOW_35_in_boolexpr341); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					char_literal7_tree = (CommonTree)adaptor.create(char_literal7);
 					root_0 = (CommonTree)adaptor.becomeRoot(char_literal7_tree, root_0);
@@ -346,9 +346,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 5 :
-					// c.g:40:40: '>=' ^
+					// c.g:41:40: '>=' ^
 					{
-					string_literal8=(Token)match(input,40,FOLLOW_40_in_boolexpr343); if (state.failed) return retval;
+					string_literal8=(Token)match(input,40,FOLLOW_40_in_boolexpr344); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal8_tree = (CommonTree)adaptor.create(string_literal8);
 					root_0 = (CommonTree)adaptor.becomeRoot(string_literal8_tree, root_0);
@@ -357,9 +357,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 6 :
-					// c.g:40:46: '<=' ^
+					// c.g:41:46: '<=' ^
 					{
-					string_literal9=(Token)match(input,36,FOLLOW_36_in_boolexpr346); if (state.failed) return retval;
+					string_literal9=(Token)match(input,36,FOLLOW_36_in_boolexpr347); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal9_tree = (CommonTree)adaptor.create(string_literal9);
 					root_0 = (CommonTree)adaptor.becomeRoot(string_literal9_tree, root_0);
@@ -370,7 +370,7 @@ public class cParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_expr_in_boolexpr350);
+			pushFollow(FOLLOW_expr_in_boolexpr351);
 			expr10=expr();
 			state._fsp--;
 			if (state.failed) return retval;
@@ -406,7 +406,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "expr"
-	// c.g:42:1: expr : multexpr ( ( '+' ^| '-' ^) multexpr )* ;
+	// c.g:43:1: expr : multexpr ( ( '+' ^| '-' ^) multexpr )* ;
 	public final cParser.expr_return expr() throws RecognitionException {
 		cParser.expr_return retval = new cParser.expr_return();
 		retval.start = input.LT(1);
@@ -422,19 +422,19 @@ public class cParser extends Parser {
 		CommonTree char_literal13_tree=null;
 
 		try {
-			// c.g:42:6: ( multexpr ( ( '+' ^| '-' ^) multexpr )* )
-			// c.g:42:8: multexpr ( ( '+' ^| '-' ^) multexpr )*
+			// c.g:43:6: ( multexpr ( ( '+' ^| '-' ^) multexpr )* )
+			// c.g:43:8: multexpr ( ( '+' ^| '-' ^) multexpr )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_multexpr_in_expr359);
+			pushFollow(FOLLOW_multexpr_in_expr360);
 			multexpr11=multexpr();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, multexpr11.getTree());
 
-			// c.g:42:17: ( ( '+' ^| '-' ^) multexpr )*
+			// c.g:43:17: ( ( '+' ^| '-' ^) multexpr )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -445,9 +445,9 @@ public class cParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// c.g:42:18: ( '+' ^| '-' ^) multexpr
+					// c.g:43:18: ( '+' ^| '-' ^) multexpr
 					{
-					// c.g:42:18: ( '+' ^| '-' ^)
+					// c.g:43:18: ( '+' ^| '-' ^)
 					int alt2=2;
 					int LA2_0 = input.LA(1);
 					if ( (LA2_0==31) ) {
@@ -466,9 +466,9 @@ public class cParser extends Parser {
 
 					switch (alt2) {
 						case 1 :
-							// c.g:42:19: '+' ^
+							// c.g:43:19: '+' ^
 							{
-							char_literal12=(Token)match(input,31,FOLLOW_31_in_expr363); if (state.failed) return retval;
+							char_literal12=(Token)match(input,31,FOLLOW_31_in_expr364); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal12_tree = (CommonTree)adaptor.create(char_literal12);
 							root_0 = (CommonTree)adaptor.becomeRoot(char_literal12_tree, root_0);
@@ -477,9 +477,9 @@ public class cParser extends Parser {
 							}
 							break;
 						case 2 :
-							// c.g:42:26: '-' ^
+							// c.g:43:26: '-' ^
 							{
-							char_literal13=(Token)match(input,33,FOLLOW_33_in_expr368); if (state.failed) return retval;
+							char_literal13=(Token)match(input,33,FOLLOW_33_in_expr369); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal13_tree = (CommonTree)adaptor.create(char_literal13);
 							root_0 = (CommonTree)adaptor.becomeRoot(char_literal13_tree, root_0);
@@ -490,7 +490,7 @@ public class cParser extends Parser {
 
 					}
 
-					pushFollow(FOLLOW_multexpr_in_expr372);
+					pushFollow(FOLLOW_multexpr_in_expr373);
 					multexpr14=multexpr();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -534,7 +534,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "multexpr"
-	// c.g:45:1: multexpr : atom ( ( '*' ^| '/' ^) atom )* ;
+	// c.g:46:1: multexpr : atom ( ( '*' ^| '/' ^) atom )* ;
 	public final cParser.multexpr_return multexpr() throws RecognitionException {
 		cParser.multexpr_return retval = new cParser.multexpr_return();
 		retval.start = input.LT(1);
@@ -550,19 +550,19 @@ public class cParser extends Parser {
 		CommonTree char_literal17_tree=null;
 
 		try {
-			// c.g:45:10: ( atom ( ( '*' ^| '/' ^) atom )* )
-			// c.g:45:12: atom ( ( '*' ^| '/' ^) atom )*
+			// c.g:46:10: ( atom ( ( '*' ^| '/' ^) atom )* )
+			// c.g:46:12: atom ( ( '*' ^| '/' ^) atom )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_atom_in_multexpr383);
+			pushFollow(FOLLOW_atom_in_multexpr384);
 			atom15=atom();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, atom15.getTree());
 
-			// c.g:45:17: ( ( '*' ^| '/' ^) atom )*
+			// c.g:46:17: ( ( '*' ^| '/' ^) atom )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -573,9 +573,9 @@ public class cParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// c.g:45:18: ( '*' ^| '/' ^) atom
+					// c.g:46:18: ( '*' ^| '/' ^) atom
 					{
-					// c.g:45:18: ( '*' ^| '/' ^)
+					// c.g:46:18: ( '*' ^| '/' ^)
 					int alt4=2;
 					int LA4_0 = input.LA(1);
 					if ( (LA4_0==30) ) {
@@ -594,9 +594,9 @@ public class cParser extends Parser {
 
 					switch (alt4) {
 						case 1 :
-							// c.g:45:19: '*' ^
+							// c.g:46:19: '*' ^
 							{
-							char_literal16=(Token)match(input,30,FOLLOW_30_in_multexpr387); if (state.failed) return retval;
+							char_literal16=(Token)match(input,30,FOLLOW_30_in_multexpr388); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal16_tree = (CommonTree)adaptor.create(char_literal16);
 							root_0 = (CommonTree)adaptor.becomeRoot(char_literal16_tree, root_0);
@@ -605,9 +605,9 @@ public class cParser extends Parser {
 							}
 							break;
 						case 2 :
-							// c.g:45:24: '/' ^
+							// c.g:46:24: '/' ^
 							{
-							char_literal17=(Token)match(input,34,FOLLOW_34_in_multexpr390); if (state.failed) return retval;
+							char_literal17=(Token)match(input,34,FOLLOW_34_in_multexpr391); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal17_tree = (CommonTree)adaptor.create(char_literal17);
 							root_0 = (CommonTree)adaptor.becomeRoot(char_literal17_tree, root_0);
@@ -618,7 +618,7 @@ public class cParser extends Parser {
 
 					}
 
-					pushFollow(FOLLOW_atom_in_multexpr394);
+					pushFollow(FOLLOW_atom_in_multexpr395);
 					atom18=atom();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -662,7 +662,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "atom"
-	// c.g:48:1: atom : ( '(' expr ')' -> ^( expr ) | num | ID | callfunc );
+	// c.g:49:1: atom : ( '(' expr ')' -> ^( expr ) | num | ID | callfunc );
 	public final cParser.atom_return atom() throws RecognitionException {
 		cParser.atom_return retval = new cParser.atom_return();
 		retval.start = input.LT(1);
@@ -684,7 +684,7 @@ public class cParser extends Parser {
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 
 		try {
-			// c.g:48:6: ( '(' expr ')' -> ^( expr ) | num | ID | callfunc )
+			// c.g:49:6: ( '(' expr ')' -> ^( expr ) | num | ID | callfunc )
 			int alt6=4;
 			switch ( input.LA(1) ) {
 			case 28:
@@ -731,17 +731,17 @@ public class cParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// c.g:48:8: '(' expr ')'
+					// c.g:49:8: '(' expr ')'
 					{
-					char_literal19=(Token)match(input,28,FOLLOW_28_in_atom405); if (state.failed) return retval; 
+					char_literal19=(Token)match(input,28,FOLLOW_28_in_atom406); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_28.add(char_literal19);
 
-					pushFollow(FOLLOW_expr_in_atom407);
+					pushFollow(FOLLOW_expr_in_atom408);
 					expr20=expr();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_expr.add(expr20.getTree());
-					char_literal21=(Token)match(input,29,FOLLOW_29_in_atom409); if (state.failed) return retval; 
+					char_literal21=(Token)match(input,29,FOLLOW_29_in_atom410); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_29.add(char_literal21);
 
 					// AST REWRITE
@@ -756,9 +756,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 48:25: -> ^( expr )
+					// 49:25: -> ^( expr )
 					{
-						// c.g:48:33: ^( expr )
+						// c.g:49:33: ^( expr )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot(stream_expr.nextNode(), root_1);
@@ -774,12 +774,12 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:49:4: num
+					// c.g:50:4: num
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_num_in_atom429);
+					pushFollow(FOLLOW_num_in_atom430);
 					num22=num();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -788,12 +788,12 @@ public class cParser extends Parser {
 					}
 					break;
 				case 3 :
-					// c.g:50:4: ID
+					// c.g:51:4: ID
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					ID23=(Token)match(input,ID,FOLLOW_ID_in_atom434); if (state.failed) return retval;
+					ID23=(Token)match(input,ID,FOLLOW_ID_in_atom435); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					ID23_tree = (CommonTree)adaptor.create(ID23);
 					adaptor.addChild(root_0, ID23_tree);
@@ -802,12 +802,12 @@ public class cParser extends Parser {
 					}
 					break;
 				case 4 :
-					// c.g:51:4: callfunc
+					// c.g:52:4: callfunc
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_callfunc_in_atom439);
+					pushFollow(FOLLOW_callfunc_in_atom440);
 					callfunc24=callfunc();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -845,7 +845,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "declarevar"
-	// c.g:54:1: declarevar : ( 'int' ^ ID | 'float' ^ ID );
+	// c.g:55:1: declarevar : ( 'int' ^ ID | 'float' ^ ID );
 	public final cParser.declarevar_return declarevar() throws RecognitionException {
 		cParser.declarevar_return retval = new cParser.declarevar_return();
 		retval.start = input.LT(1);
@@ -863,7 +863,7 @@ public class cParser extends Parser {
 		CommonTree ID28_tree=null;
 
 		try {
-			// c.g:54:12: ( 'int' ^ ID | 'float' ^ ID )
+			// c.g:55:12: ( 'int' ^ ID | 'float' ^ ID )
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0==45) ) {
@@ -882,18 +882,18 @@ public class cParser extends Parser {
 
 			switch (alt7) {
 				case 1 :
-					// c.g:54:14: 'int' ^ ID
+					// c.g:55:14: 'int' ^ ID
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					string_literal25=(Token)match(input,45,FOLLOW_45_in_declarevar450); if (state.failed) return retval;
+					string_literal25=(Token)match(input,45,FOLLOW_45_in_declarevar451); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal25_tree = (CommonTree)adaptor.create(string_literal25);
 					root_0 = (CommonTree)adaptor.becomeRoot(string_literal25_tree, root_0);
 					}
 
-					ID26=(Token)match(input,ID,FOLLOW_ID_in_declarevar453); if (state.failed) return retval;
+					ID26=(Token)match(input,ID,FOLLOW_ID_in_declarevar454); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					ID26_tree = (CommonTree)adaptor.create(ID26);
 					adaptor.addChild(root_0, ID26_tree);
@@ -902,18 +902,18 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:55:4: 'float' ^ ID
+					// c.g:56:4: 'float' ^ ID
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					string_literal27=(Token)match(input,42,FOLLOW_42_in_declarevar458); if (state.failed) return retval;
+					string_literal27=(Token)match(input,42,FOLLOW_42_in_declarevar459); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal27_tree = (CommonTree)adaptor.create(string_literal27);
 					root_0 = (CommonTree)adaptor.becomeRoot(string_literal27_tree, root_0);
 					}
 
-					ID28=(Token)match(input,ID,FOLLOW_ID_in_declarevar461); if (state.failed) return retval;
+					ID28=(Token)match(input,ID,FOLLOW_ID_in_declarevar462); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					ID28_tree = (CommonTree)adaptor.create(ID28);
 					adaptor.addChild(root_0, ID28_tree);
@@ -951,7 +951,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "givevalue"
-	// c.g:59:1: givevalue : ID '=' expr -> ^( '=' ID expr ) ;
+	// c.g:60:1: givevalue : ID '=' expr -> ^( '=' ID expr ) ;
 	public final cParser.givevalue_return givevalue() throws RecognitionException {
 		cParser.givevalue_return retval = new cParser.givevalue_return();
 		retval.start = input.LT(1);
@@ -969,16 +969,16 @@ public class cParser extends Parser {
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 
 		try {
-			// c.g:59:11: ( ID '=' expr -> ^( '=' ID expr ) )
-			// c.g:59:13: ID '=' expr
+			// c.g:60:11: ( ID '=' expr -> ^( '=' ID expr ) )
+			// c.g:60:13: ID '=' expr
 			{
-			ID29=(Token)match(input,ID,FOLLOW_ID_in_givevalue474); if (state.failed) return retval; 
+			ID29=(Token)match(input,ID,FOLLOW_ID_in_givevalue475); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_ID.add(ID29);
 
-			char_literal30=(Token)match(input,37,FOLLOW_37_in_givevalue477); if (state.failed) return retval; 
+			char_literal30=(Token)match(input,37,FOLLOW_37_in_givevalue478); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_37.add(char_literal30);
 
-			pushFollow(FOLLOW_expr_in_givevalue479);
+			pushFollow(FOLLOW_expr_in_givevalue480);
 			expr31=expr();
 			state._fsp--;
 			if (state.failed) return retval;
@@ -995,9 +995,9 @@ public class cParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 60:2: -> ^( '=' ID expr )
+			// 61:2: -> ^( '=' ID expr )
 			{
-				// c.g:60:5: ^( '=' ID expr )
+				// c.g:61:5: ^( '=' ID expr )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot(stream_37.nextNode(), root_1);
@@ -1042,7 +1042,7 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "ifstat"
-	// c.g:63:1: ifstat options {backtrack=true; } : ( 'if' '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}' -> ^( IF boolexpr $s1 ELSE $s2) | 'if' '(' boolexpr ')' '{' ( stat )* '}' -> ^( IF boolexpr ( stat )* ) );
+	// c.g:64:1: ifstat options {backtrack=true; } : ( 'if' INT '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}' -> ^( IF INT boolexpr $s1 ELSE $s2) | 'if' INT '(' boolexpr ')' '{' ( stat )* '}' -> ^( IF INT boolexpr ( stat )* ) );
 	public final cParser.ifstat_return ifstat() throws RecognitionException {
 		cParser.ifstat_return retval = new cParser.ifstat_return();
 		retval.start = input.LT(1);
@@ -1050,48 +1050,53 @@ public class cParser extends Parser {
 		CommonTree root_0 = null;
 
 		Token string_literal32=null;
-		Token char_literal33=null;
-		Token char_literal35=null;
+		Token INT33=null;
+		Token char_literal34=null;
 		Token char_literal36=null;
 		Token char_literal37=null;
-		Token string_literal38=null;
-		Token char_literal39=null;
+		Token char_literal38=null;
+		Token string_literal39=null;
 		Token char_literal40=null;
-		Token string_literal41=null;
-		Token char_literal42=null;
+		Token char_literal41=null;
+		Token string_literal42=null;
+		Token INT43=null;
 		Token char_literal44=null;
-		Token char_literal45=null;
+		Token char_literal46=null;
 		Token char_literal47=null;
+		Token char_literal49=null;
 		ParserRuleReturnScope s1 =null;
 		ParserRuleReturnScope s2 =null;
-		ParserRuleReturnScope boolexpr34 =null;
-		ParserRuleReturnScope boolexpr43 =null;
-		ParserRuleReturnScope stat46 =null;
+		ParserRuleReturnScope boolexpr35 =null;
+		ParserRuleReturnScope boolexpr45 =null;
+		ParserRuleReturnScope stat48 =null;
 
 		CommonTree string_literal32_tree=null;
-		CommonTree char_literal33_tree=null;
-		CommonTree char_literal35_tree=null;
+		CommonTree INT33_tree=null;
+		CommonTree char_literal34_tree=null;
 		CommonTree char_literal36_tree=null;
 		CommonTree char_literal37_tree=null;
-		CommonTree string_literal38_tree=null;
-		CommonTree char_literal39_tree=null;
+		CommonTree char_literal38_tree=null;
+		CommonTree string_literal39_tree=null;
 		CommonTree char_literal40_tree=null;
-		CommonTree string_literal41_tree=null;
-		CommonTree char_literal42_tree=null;
+		CommonTree char_literal41_tree=null;
+		CommonTree string_literal42_tree=null;
+		CommonTree INT43_tree=null;
 		CommonTree char_literal44_tree=null;
-		CommonTree char_literal45_tree=null;
+		CommonTree char_literal46_tree=null;
 		CommonTree char_literal47_tree=null;
+		CommonTree char_literal49_tree=null;
 		RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
 		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
 		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
 		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
 		RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
+		RewriteRuleTokenStream stream_INT=new RewriteRuleTokenStream(adaptor,"token INT");
 		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
 		RewriteRuleSubtreeStream stream_boolexpr=new RewriteRuleSubtreeStream(adaptor,"rule boolexpr");
 
 		try {
-			// c.g:64:2: ( 'if' '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}' -> ^( IF boolexpr $s1 ELSE $s2) | 'if' '(' boolexpr ')' '{' ( stat )* '}' -> ^( IF boolexpr ( stat )* ) )
+			// c.g:65:2: ( 'if' INT '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}' -> ^( IF INT boolexpr $s1 ELSE $s2) | 'if' INT '(' boolexpr ')' '{' ( stat )* '}' -> ^( IF INT boolexpr ( stat )* ) )
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==44) ) {
@@ -1114,26 +1119,29 @@ public class cParser extends Parser {
 
 			switch (alt11) {
 				case 1 :
-					// c.g:64:4: 'if' '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}'
+					// c.g:65:4: 'if' INT '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}'
 					{
-					string_literal32=(Token)match(input,44,FOLLOW_44_in_ifstat512); if (state.failed) return retval; 
+					string_literal32=(Token)match(input,44,FOLLOW_44_in_ifstat513); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_44.add(string_literal32);
 
-					char_literal33=(Token)match(input,28,FOLLOW_28_in_ifstat514); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal33);
+					INT33=(Token)match(input,INT,FOLLOW_INT_in_ifstat515); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_INT.add(INT33);
 
-					pushFollow(FOLLOW_boolexpr_in_ifstat516);
-					boolexpr34=boolexpr();
+					char_literal34=(Token)match(input,28,FOLLOW_28_in_ifstat517); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal34);
+
+					pushFollow(FOLLOW_boolexpr_in_ifstat519);
+					boolexpr35=boolexpr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_boolexpr.add(boolexpr34.getTree());
-					char_literal35=(Token)match(input,29,FOLLOW_29_in_ifstat518); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal35);
+					if ( state.backtracking==0 ) stream_boolexpr.add(boolexpr35.getTree());
+					char_literal36=(Token)match(input,29,FOLLOW_29_in_ifstat521); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal36);
 
-					char_literal36=(Token)match(input,49,FOLLOW_49_in_ifstat520); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal36);
+					char_literal37=(Token)match(input,49,FOLLOW_49_in_ifstat523); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal37);
 
-					// c.g:64:32: (s1= stat )*
+					// c.g:65:36: (s1= stat )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1144,9 +1152,9 @@ public class cParser extends Parser {
 
 						switch (alt8) {
 						case 1 :
-							// c.g:64:32: s1= stat
+							// c.g:65:36: s1= stat
 							{
-							pushFollow(FOLLOW_stat_in_ifstat524);
+							pushFollow(FOLLOW_stat_in_ifstat527);
 							s1=stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1159,16 +1167,16 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal37=(Token)match(input,50,FOLLOW_50_in_ifstat527); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal37);
+					char_literal38=(Token)match(input,50,FOLLOW_50_in_ifstat530); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal38);
 
-					string_literal38=(Token)match(input,41,FOLLOW_41_in_ifstat529); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_41.add(string_literal38);
+					string_literal39=(Token)match(input,41,FOLLOW_41_in_ifstat532); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_41.add(string_literal39);
 
-					char_literal39=(Token)match(input,49,FOLLOW_49_in_ifstat531); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal39);
+					char_literal40=(Token)match(input,49,FOLLOW_49_in_ifstat534); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal40);
 
-					// c.g:64:56: (s2= stat )*
+					// c.g:65:60: (s2= stat )*
 					loop9:
 					while (true) {
 						int alt9=2;
@@ -1179,9 +1187,9 @@ public class cParser extends Parser {
 
 						switch (alt9) {
 						case 1 :
-							// c.g:64:56: s2= stat
+							// c.g:65:60: s2= stat
 							{
-							pushFollow(FOLLOW_stat_in_ifstat535);
+							pushFollow(FOLLOW_stat_in_ifstat538);
 							s2=stat();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -1194,11 +1202,11 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal40=(Token)match(input,50,FOLLOW_50_in_ifstat538); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal40);
+					char_literal41=(Token)match(input,50,FOLLOW_50_in_ifstat541); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal41);
 
 					// AST REWRITE
-					// elements: s1, boolexpr, s2
+					// elements: s2, s1, INT, boolexpr
 					// token labels: 
 					// rule labels: s1, retval, s2
 					// token list labels: 
@@ -1211,12 +1219,13 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_s2=new RewriteRuleSubtreeStream(adaptor,"rule s2",s2!=null?s2.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 65:2: -> ^( IF boolexpr $s1 ELSE $s2)
+					// 66:2: -> ^( IF INT boolexpr $s1 ELSE $s2)
 					{
-						// c.g:65:5: ^( IF boolexpr $s1 ELSE $s2)
+						// c.g:66:5: ^( IF INT boolexpr $s1 ELSE $s2)
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IF, "IF"), root_1);
+						adaptor.addChild(root_1, stream_INT.nextNode());
 						adaptor.addChild(root_1, stream_boolexpr.nextTree());
 						adaptor.addChild(root_1, stream_s1.nextTree());
 						adaptor.addChild(root_1, (CommonTree)adaptor.create(ELSE, "ELSE"));
@@ -1233,26 +1242,29 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:66:4: 'if' '(' boolexpr ')' '{' ( stat )* '}'
+					// c.g:67:4: 'if' INT '(' boolexpr ')' '{' ( stat )* '}'
 					{
-					string_literal41=(Token)match(input,44,FOLLOW_44_in_ifstat560); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_44.add(string_literal41);
+					string_literal42=(Token)match(input,44,FOLLOW_44_in_ifstat566); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_44.add(string_literal42);
 
-					char_literal42=(Token)match(input,28,FOLLOW_28_in_ifstat562); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal42);
+					INT43=(Token)match(input,INT,FOLLOW_INT_in_ifstat568); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_INT.add(INT43);
 
-					pushFollow(FOLLOW_boolexpr_in_ifstat564);
-					boolexpr43=boolexpr();
+					char_literal44=(Token)match(input,28,FOLLOW_28_in_ifstat570); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal44);
+
+					pushFollow(FOLLOW_boolexpr_in_ifstat572);
+					boolexpr45=boolexpr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_boolexpr.add(boolexpr43.getTree());
-					char_literal44=(Token)match(input,29,FOLLOW_29_in_ifstat566); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal44);
+					if ( state.backtracking==0 ) stream_boolexpr.add(boolexpr45.getTree());
+					char_literal46=(Token)match(input,29,FOLLOW_29_in_ifstat574); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal46);
 
-					char_literal45=(Token)match(input,49,FOLLOW_49_in_ifstat568); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal45);
+					char_literal47=(Token)match(input,49,FOLLOW_49_in_ifstat576); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal47);
 
-					// c.g:66:30: ( stat )*
+					// c.g:67:34: ( stat )*
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -1263,13 +1275,13 @@ public class cParser extends Parser {
 
 						switch (alt10) {
 						case 1 :
-							// c.g:66:30: stat
+							// c.g:67:34: stat
 							{
-							pushFollow(FOLLOW_stat_in_ifstat570);
-							stat46=stat();
+							pushFollow(FOLLOW_stat_in_ifstat578);
+							stat48=stat();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_stat.add(stat46.getTree());
+							if ( state.backtracking==0 ) stream_stat.add(stat48.getTree());
 							}
 							break;
 
@@ -1278,11 +1290,11 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal47=(Token)match(input,50,FOLLOW_50_in_ifstat573); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal47);
+					char_literal49=(Token)match(input,50,FOLLOW_50_in_ifstat581); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal49);
 
 					// AST REWRITE
-					// elements: stat, boolexpr
+					// elements: INT, stat, boolexpr
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -1293,14 +1305,15 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 67:2: -> ^( IF boolexpr ( stat )* )
+					// 68:2: -> ^( IF INT boolexpr ( stat )* )
 					{
-						// c.g:67:5: ^( IF boolexpr ( stat )* )
+						// c.g:68:5: ^( IF INT boolexpr ( stat )* )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IF, "IF"), root_1);
+						adaptor.addChild(root_1, stream_INT.nextNode());
 						adaptor.addChild(root_1, stream_boolexpr.nextTree());
-						// c.g:67:19: ( stat )*
+						// c.g:68:23: ( stat )*
 						while ( stream_stat.hasNext() ) {
 							adaptor.addChild(root_1, stream_stat.nextTree());
 						}
@@ -1347,56 +1360,62 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "whilestat"
-	// c.g:70:1: whilestat options {backtrack=true; } : 'while' '(' boolexpr ')' '{' ( stat )* '}' -> ^( 'while' boolexpr ( stat )* ) ;
+	// c.g:71:1: whilestat options {backtrack=true; } : 'while' INT '(' boolexpr ')' '{' ( stat )* '}' -> ^( 'while' INT boolexpr ( stat )* ) ;
 	public final cParser.whilestat_return whilestat() throws RecognitionException {
 		cParser.whilestat_return retval = new cParser.whilestat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token string_literal48=null;
-		Token char_literal49=null;
-		Token char_literal51=null;
+		Token string_literal50=null;
+		Token INT51=null;
 		Token char_literal52=null;
 		Token char_literal54=null;
-		ParserRuleReturnScope boolexpr50 =null;
-		ParserRuleReturnScope stat53 =null;
+		Token char_literal55=null;
+		Token char_literal57=null;
+		ParserRuleReturnScope boolexpr53 =null;
+		ParserRuleReturnScope stat56 =null;
 
-		CommonTree string_literal48_tree=null;
-		CommonTree char_literal49_tree=null;
-		CommonTree char_literal51_tree=null;
+		CommonTree string_literal50_tree=null;
+		CommonTree INT51_tree=null;
 		CommonTree char_literal52_tree=null;
 		CommonTree char_literal54_tree=null;
+		CommonTree char_literal55_tree=null;
+		CommonTree char_literal57_tree=null;
 		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
 		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
 		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
 		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
+		RewriteRuleTokenStream stream_INT=new RewriteRuleTokenStream(adaptor,"token INT");
 		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
 		RewriteRuleSubtreeStream stream_boolexpr=new RewriteRuleSubtreeStream(adaptor,"rule boolexpr");
 
 		try {
-			// c.g:71:2: ( 'while' '(' boolexpr ')' '{' ( stat )* '}' -> ^( 'while' boolexpr ( stat )* ) )
-			// c.g:71:4: 'while' '(' boolexpr ')' '{' ( stat )* '}'
+			// c.g:72:2: ( 'while' INT '(' boolexpr ')' '{' ( stat )* '}' -> ^( 'while' INT boolexpr ( stat )* ) )
+			// c.g:72:4: 'while' INT '(' boolexpr ')' '{' ( stat )* '}'
 			{
-			string_literal48=(Token)match(input,48,FOLLOW_48_in_whilestat607); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_48.add(string_literal48);
+			string_literal50=(Token)match(input,48,FOLLOW_48_in_whilestat617); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_48.add(string_literal50);
 
-			char_literal49=(Token)match(input,28,FOLLOW_28_in_whilestat609); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_28.add(char_literal49);
+			INT51=(Token)match(input,INT,FOLLOW_INT_in_whilestat619); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_INT.add(INT51);
 
-			pushFollow(FOLLOW_boolexpr_in_whilestat611);
-			boolexpr50=boolexpr();
+			char_literal52=(Token)match(input,28,FOLLOW_28_in_whilestat621); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_28.add(char_literal52);
+
+			pushFollow(FOLLOW_boolexpr_in_whilestat623);
+			boolexpr53=boolexpr();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_boolexpr.add(boolexpr50.getTree());
-			char_literal51=(Token)match(input,29,FOLLOW_29_in_whilestat613); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_29.add(char_literal51);
+			if ( state.backtracking==0 ) stream_boolexpr.add(boolexpr53.getTree());
+			char_literal54=(Token)match(input,29,FOLLOW_29_in_whilestat625); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_29.add(char_literal54);
 
-			char_literal52=(Token)match(input,49,FOLLOW_49_in_whilestat615); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_49.add(char_literal52);
+			char_literal55=(Token)match(input,49,FOLLOW_49_in_whilestat627); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_49.add(char_literal55);
 
-			// c.g:71:33: ( stat )*
+			// c.g:72:37: ( stat )*
 			loop12:
 			while (true) {
 				int alt12=2;
@@ -1407,13 +1426,13 @@ public class cParser extends Parser {
 
 				switch (alt12) {
 				case 1 :
-					// c.g:71:33: stat
+					// c.g:72:37: stat
 					{
-					pushFollow(FOLLOW_stat_in_whilestat617);
-					stat53=stat();
+					pushFollow(FOLLOW_stat_in_whilestat629);
+					stat56=stat();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_stat.add(stat53.getTree());
+					if ( state.backtracking==0 ) stream_stat.add(stat56.getTree());
 					}
 					break;
 
@@ -1422,11 +1441,11 @@ public class cParser extends Parser {
 				}
 			}
 
-			char_literal54=(Token)match(input,50,FOLLOW_50_in_whilestat620); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_50.add(char_literal54);
+			char_literal57=(Token)match(input,50,FOLLOW_50_in_whilestat632); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_50.add(char_literal57);
 
 			// AST REWRITE
-			// elements: boolexpr, stat, 48
+			// elements: stat, 48, boolexpr, INT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1437,14 +1456,15 @@ public class cParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 72:2: -> ^( 'while' boolexpr ( stat )* )
+			// 73:2: -> ^( 'while' INT boolexpr ( stat )* )
 			{
-				// c.g:72:5: ^( 'while' boolexpr ( stat )* )
+				// c.g:73:5: ^( 'while' INT boolexpr ( stat )* )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot(stream_48.nextNode(), root_1);
+				adaptor.addChild(root_1, stream_INT.nextNode());
 				adaptor.addChild(root_1, stream_boolexpr.nextTree());
-				// c.g:72:24: ( stat )*
+				// c.g:73:28: ( stat )*
 				while ( stream_stat.hasNext() ) {
 					adaptor.addChild(root_1, stream_stat.nextTree());
 				}
@@ -1489,80 +1509,86 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "forstat"
-	// c.g:75:1: forstat options {backtrack=true; } : 'for' '(' s1= givevalue ';' s2= boolexpr ';' s3= givevalue ')' '{' (s4= stat )* '}' -> ^( 'for' $s1 $s2 $s4 $s3) ;
+	// c.g:76:1: forstat options {backtrack=true; } : 'for' INT '(' s1= givevalue ';' s2= boolexpr ';' s3= givevalue ')' '{' (s4= stat )* '}' -> ^( 'for' INT $s1 $s2 $s4 $s3) ;
 	public final cParser.forstat_return forstat() throws RecognitionException {
 		cParser.forstat_return retval = new cParser.forstat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token string_literal55=null;
-		Token char_literal56=null;
-		Token char_literal57=null;
-		Token char_literal58=null;
-		Token char_literal59=null;
+		Token string_literal58=null;
+		Token INT59=null;
 		Token char_literal60=null;
 		Token char_literal61=null;
+		Token char_literal62=null;
+		Token char_literal63=null;
+		Token char_literal64=null;
+		Token char_literal65=null;
 		ParserRuleReturnScope s1 =null;
 		ParserRuleReturnScope s2 =null;
 		ParserRuleReturnScope s3 =null;
 		ParserRuleReturnScope s4 =null;
 
-		CommonTree string_literal55_tree=null;
-		CommonTree char_literal56_tree=null;
-		CommonTree char_literal57_tree=null;
-		CommonTree char_literal58_tree=null;
-		CommonTree char_literal59_tree=null;
+		CommonTree string_literal58_tree=null;
+		CommonTree INT59_tree=null;
 		CommonTree char_literal60_tree=null;
 		CommonTree char_literal61_tree=null;
+		CommonTree char_literal62_tree=null;
+		CommonTree char_literal63_tree=null;
+		CommonTree char_literal64_tree=null;
+		CommonTree char_literal65_tree=null;
 		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
 		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
 		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
 		RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
+		RewriteRuleTokenStream stream_INT=new RewriteRuleTokenStream(adaptor,"token INT");
 		RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
 		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
 		RewriteRuleSubtreeStream stream_givevalue=new RewriteRuleSubtreeStream(adaptor,"rule givevalue");
 		RewriteRuleSubtreeStream stream_boolexpr=new RewriteRuleSubtreeStream(adaptor,"rule boolexpr");
 
 		try {
-			// c.g:76:2: ( 'for' '(' s1= givevalue ';' s2= boolexpr ';' s3= givevalue ')' '{' (s4= stat )* '}' -> ^( 'for' $s1 $s2 $s4 $s3) )
-			// c.g:76:4: 'for' '(' s1= givevalue ';' s2= boolexpr ';' s3= givevalue ')' '{' (s4= stat )* '}'
+			// c.g:77:2: ( 'for' INT '(' s1= givevalue ';' s2= boolexpr ';' s3= givevalue ')' '{' (s4= stat )* '}' -> ^( 'for' INT $s1 $s2 $s4 $s3) )
+			// c.g:77:4: 'for' INT '(' s1= givevalue ';' s2= boolexpr ';' s3= givevalue ')' '{' (s4= stat )* '}'
 			{
-			string_literal55=(Token)match(input,43,FOLLOW_43_in_forstat654); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_43.add(string_literal55);
+			string_literal58=(Token)match(input,43,FOLLOW_43_in_forstat668); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_43.add(string_literal58);
 
-			char_literal56=(Token)match(input,28,FOLLOW_28_in_forstat656); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_28.add(char_literal56);
+			INT59=(Token)match(input,INT,FOLLOW_INT_in_forstat670); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_INT.add(INT59);
 
-			pushFollow(FOLLOW_givevalue_in_forstat660);
+			char_literal60=(Token)match(input,28,FOLLOW_28_in_forstat672); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_28.add(char_literal60);
+
+			pushFollow(FOLLOW_givevalue_in_forstat676);
 			s1=givevalue();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) stream_givevalue.add(s1.getTree());
-			char_literal57=(Token)match(input,END,FOLLOW_END_in_forstat662); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_END.add(char_literal57);
+			char_literal61=(Token)match(input,END,FOLLOW_END_in_forstat678); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_END.add(char_literal61);
 
-			pushFollow(FOLLOW_boolexpr_in_forstat666);
+			pushFollow(FOLLOW_boolexpr_in_forstat682);
 			s2=boolexpr();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) stream_boolexpr.add(s2.getTree());
-			char_literal58=(Token)match(input,END,FOLLOW_END_in_forstat668); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_END.add(char_literal58);
+			char_literal62=(Token)match(input,END,FOLLOW_END_in_forstat684); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_END.add(char_literal62);
 
-			pushFollow(FOLLOW_givevalue_in_forstat672);
+			pushFollow(FOLLOW_givevalue_in_forstat688);
 			s3=givevalue();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) stream_givevalue.add(s3.getTree());
-			char_literal59=(Token)match(input,29,FOLLOW_29_in_forstat674); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_29.add(char_literal59);
+			char_literal63=(Token)match(input,29,FOLLOW_29_in_forstat690); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_29.add(char_literal63);
 
-			char_literal60=(Token)match(input,49,FOLLOW_49_in_forstat676); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_49.add(char_literal60);
+			char_literal64=(Token)match(input,49,FOLLOW_49_in_forstat692); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_49.add(char_literal64);
 
-			// c.g:76:70: (s4= stat )*
+			// c.g:77:74: (s4= stat )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -1573,9 +1599,9 @@ public class cParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// c.g:76:70: s4= stat
+					// c.g:77:74: s4= stat
 					{
-					pushFollow(FOLLOW_stat_in_forstat680);
+					pushFollow(FOLLOW_stat_in_forstat696);
 					s4=stat();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -1588,11 +1614,11 @@ public class cParser extends Parser {
 				}
 			}
 
-			char_literal61=(Token)match(input,50,FOLLOW_50_in_forstat683); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_50.add(char_literal61);
+			char_literal65=(Token)match(input,50,FOLLOW_50_in_forstat699); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_50.add(char_literal65);
 
 			// AST REWRITE
-			// elements: s1, 43, s4, s3, s2
+			// elements: INT, s3, s2, s1, 43, s4
 			// token labels: 
 			// rule labels: s3, s4, s1, retval, s2
 			// token list labels: 
@@ -1607,12 +1633,13 @@ public class cParser extends Parser {
 			RewriteRuleSubtreeStream stream_s2=new RewriteRuleSubtreeStream(adaptor,"rule s2",s2!=null?s2.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 77:2: -> ^( 'for' $s1 $s2 $s4 $s3)
+			// 78:2: -> ^( 'for' INT $s1 $s2 $s4 $s3)
 			{
-				// c.g:77:5: ^( 'for' $s1 $s2 $s4 $s3)
+				// c.g:78:5: ^( 'for' INT $s1 $s2 $s4 $s3)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot(stream_43.nextNode(), root_1);
+				adaptor.addChild(root_1, stream_INT.nextNode());
 				adaptor.addChild(root_1, stream_s1.nextTree());
 				adaptor.addChild(root_1, stream_s2.nextTree());
 				adaptor.addChild(root_1, stream_s4.nextTree());
@@ -1656,96 +1683,96 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "declarefunc"
-	// c.g:80:1: declarefunc : ( 'void' ID '(' ')' '{' ( stat )* '}' -> ^( FUNC1 ID ( stat )* ) | ( 'int' | 'float' ) ID '(' ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC2 ID ( stat )* expr ) | 'void' ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* '}' -> ^( FUNC3 ID ( num_type ID )+ ( stat )* ) | ( 'int' | 'float' ) ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC4 ID ( num_type ID )+ ( stat )* expr ) );
+	// c.g:81:1: declarefunc : ( 'void' ID '(' ')' '{' ( stat )* '}' -> ^( FUNC1 ID ( stat )* ) | ( 'int' | 'float' ) ID '(' ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC2 ID ( stat )* expr ) | 'void' ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* '}' -> ^( FUNC3 ID ( num_type ID )+ ( stat )* ) | ( 'int' | 'float' ) ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC4 ID ( num_type ID )+ ( stat )* expr ) );
 	public final cParser.declarefunc_return declarefunc() throws RecognitionException {
 		cParser.declarefunc_return retval = new cParser.declarefunc_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token string_literal62=null;
-		Token ID63=null;
-		Token char_literal64=null;
-		Token char_literal65=null;
-		Token char_literal66=null;
+		Token string_literal66=null;
+		Token ID67=null;
 		Token char_literal68=null;
-		Token string_literal69=null;
-		Token string_literal70=null;
-		Token ID71=null;
+		Token char_literal69=null;
+		Token char_literal70=null;
 		Token char_literal72=null;
-		Token char_literal73=null;
-		Token char_literal74=null;
-		Token string_literal76=null;
-		Token END78=null;
-		Token char_literal79=null;
+		Token string_literal73=null;
+		Token string_literal74=null;
+		Token ID75=null;
+		Token char_literal76=null;
+		Token char_literal77=null;
+		Token char_literal78=null;
 		Token string_literal80=null;
-		Token ID81=null;
-		Token char_literal82=null;
-		Token ID84=null;
-		Token char_literal85=null;
-		Token ID87=null;
-		Token char_literal88=null;
+		Token END82=null;
+		Token char_literal83=null;
+		Token string_literal84=null;
+		Token ID85=null;
+		Token char_literal86=null;
+		Token ID88=null;
 		Token char_literal89=null;
-		Token char_literal91=null;
-		Token string_literal92=null;
-		Token string_literal93=null;
-		Token ID94=null;
+		Token ID91=null;
+		Token char_literal92=null;
+		Token char_literal93=null;
 		Token char_literal95=null;
-		Token ID97=null;
-		Token char_literal98=null;
-		Token ID100=null;
-		Token char_literal101=null;
+		Token string_literal96=null;
+		Token string_literal97=null;
+		Token ID98=null;
+		Token char_literal99=null;
+		Token ID101=null;
 		Token char_literal102=null;
-		Token string_literal104=null;
-		Token END106=null;
-		Token char_literal107=null;
-		ParserRuleReturnScope stat67 =null;
-		ParserRuleReturnScope stat75 =null;
-		ParserRuleReturnScope expr77 =null;
-		ParserRuleReturnScope num_type83 =null;
-		ParserRuleReturnScope num_type86 =null;
-		ParserRuleReturnScope stat90 =null;
-		ParserRuleReturnScope num_type96 =null;
-		ParserRuleReturnScope num_type99 =null;
-		ParserRuleReturnScope stat103 =null;
-		ParserRuleReturnScope expr105 =null;
+		Token ID104=null;
+		Token char_literal105=null;
+		Token char_literal106=null;
+		Token string_literal108=null;
+		Token END110=null;
+		Token char_literal111=null;
+		ParserRuleReturnScope stat71 =null;
+		ParserRuleReturnScope stat79 =null;
+		ParserRuleReturnScope expr81 =null;
+		ParserRuleReturnScope num_type87 =null;
+		ParserRuleReturnScope num_type90 =null;
+		ParserRuleReturnScope stat94 =null;
+		ParserRuleReturnScope num_type100 =null;
+		ParserRuleReturnScope num_type103 =null;
+		ParserRuleReturnScope stat107 =null;
+		ParserRuleReturnScope expr109 =null;
 
-		CommonTree string_literal62_tree=null;
-		CommonTree ID63_tree=null;
-		CommonTree char_literal64_tree=null;
-		CommonTree char_literal65_tree=null;
-		CommonTree char_literal66_tree=null;
+		CommonTree string_literal66_tree=null;
+		CommonTree ID67_tree=null;
 		CommonTree char_literal68_tree=null;
-		CommonTree string_literal69_tree=null;
-		CommonTree string_literal70_tree=null;
-		CommonTree ID71_tree=null;
+		CommonTree char_literal69_tree=null;
+		CommonTree char_literal70_tree=null;
 		CommonTree char_literal72_tree=null;
-		CommonTree char_literal73_tree=null;
-		CommonTree char_literal74_tree=null;
-		CommonTree string_literal76_tree=null;
-		CommonTree END78_tree=null;
-		CommonTree char_literal79_tree=null;
+		CommonTree string_literal73_tree=null;
+		CommonTree string_literal74_tree=null;
+		CommonTree ID75_tree=null;
+		CommonTree char_literal76_tree=null;
+		CommonTree char_literal77_tree=null;
+		CommonTree char_literal78_tree=null;
 		CommonTree string_literal80_tree=null;
-		CommonTree ID81_tree=null;
-		CommonTree char_literal82_tree=null;
-		CommonTree ID84_tree=null;
-		CommonTree char_literal85_tree=null;
-		CommonTree ID87_tree=null;
-		CommonTree char_literal88_tree=null;
+		CommonTree END82_tree=null;
+		CommonTree char_literal83_tree=null;
+		CommonTree string_literal84_tree=null;
+		CommonTree ID85_tree=null;
+		CommonTree char_literal86_tree=null;
+		CommonTree ID88_tree=null;
 		CommonTree char_literal89_tree=null;
-		CommonTree char_literal91_tree=null;
-		CommonTree string_literal92_tree=null;
-		CommonTree string_literal93_tree=null;
-		CommonTree ID94_tree=null;
+		CommonTree ID91_tree=null;
+		CommonTree char_literal92_tree=null;
+		CommonTree char_literal93_tree=null;
 		CommonTree char_literal95_tree=null;
-		CommonTree ID97_tree=null;
-		CommonTree char_literal98_tree=null;
-		CommonTree ID100_tree=null;
-		CommonTree char_literal101_tree=null;
+		CommonTree string_literal96_tree=null;
+		CommonTree string_literal97_tree=null;
+		CommonTree ID98_tree=null;
+		CommonTree char_literal99_tree=null;
+		CommonTree ID101_tree=null;
 		CommonTree char_literal102_tree=null;
-		CommonTree string_literal104_tree=null;
-		CommonTree END106_tree=null;
-		CommonTree char_literal107_tree=null;
+		CommonTree ID104_tree=null;
+		CommonTree char_literal105_tree=null;
+		CommonTree char_literal106_tree=null;
+		CommonTree string_literal108_tree=null;
+		CommonTree END110_tree=null;
+		CommonTree char_literal111_tree=null;
 		RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
 		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
 		RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
@@ -1762,7 +1789,7 @@ public class cParser extends Parser {
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 
 		try {
-			// c.g:81:2: ( 'void' ID '(' ')' '{' ( stat )* '}' -> ^( FUNC1 ID ( stat )* ) | ( 'int' | 'float' ) ID '(' ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC2 ID ( stat )* expr ) | 'void' ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* '}' -> ^( FUNC3 ID ( num_type ID )+ ( stat )* ) | ( 'int' | 'float' ) ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC4 ID ( num_type ID )+ ( stat )* expr ) )
+			// c.g:82:2: ( 'void' ID '(' ')' '{' ( stat )* '}' -> ^( FUNC1 ID ( stat )* ) | ( 'int' | 'float' ) ID '(' ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC2 ID ( stat )* expr ) | 'void' ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* '}' -> ^( FUNC3 ID ( num_type ID )+ ( stat )* ) | ( 'int' | 'float' ) ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* 'return' expr END '}' -> ^( FUNC4 ID ( num_type ID )+ ( stat )* expr ) )
 			int alt22=4;
 			switch ( input.LA(1) ) {
 			case 47:
@@ -1962,24 +1989,24 @@ public class cParser extends Parser {
 			}
 			switch (alt22) {
 				case 1 :
-					// c.g:81:4: 'void' ID '(' ')' '{' ( stat )* '}'
+					// c.g:82:4: 'void' ID '(' ')' '{' ( stat )* '}'
 					{
-					string_literal62=(Token)match(input,47,FOLLOW_47_in_declarefunc717); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_47.add(string_literal62);
+					string_literal66=(Token)match(input,47,FOLLOW_47_in_declarefunc735); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_47.add(string_literal66);
 
-					ID63=(Token)match(input,ID,FOLLOW_ID_in_declarefunc719); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID63);
+					ID67=(Token)match(input,ID,FOLLOW_ID_in_declarefunc737); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID67);
 
-					char_literal64=(Token)match(input,28,FOLLOW_28_in_declarefunc721); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal64);
+					char_literal68=(Token)match(input,28,FOLLOW_28_in_declarefunc739); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal68);
 
-					char_literal65=(Token)match(input,29,FOLLOW_29_in_declarefunc723); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal65);
+					char_literal69=(Token)match(input,29,FOLLOW_29_in_declarefunc741); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal69);
 
-					char_literal66=(Token)match(input,49,FOLLOW_49_in_declarefunc725); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal66);
+					char_literal70=(Token)match(input,49,FOLLOW_49_in_declarefunc743); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal70);
 
-					// c.g:81:26: ( stat )*
+					// c.g:82:26: ( stat )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -1990,13 +2017,13 @@ public class cParser extends Parser {
 
 						switch (alt14) {
 						case 1 :
-							// c.g:81:26: stat
+							// c.g:82:26: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc727);
-							stat67=stat();
+							pushFollow(FOLLOW_stat_in_declarefunc745);
+							stat71=stat();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_stat.add(stat67.getTree());
+							if ( state.backtracking==0 ) stream_stat.add(stat71.getTree());
 							}
 							break;
 
@@ -2005,11 +2032,11 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal68=(Token)match(input,50,FOLLOW_50_in_declarefunc730); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal68);
+					char_literal72=(Token)match(input,50,FOLLOW_50_in_declarefunc748); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal72);
 
 					// AST REWRITE
-					// elements: stat, ID
+					// elements: ID, stat
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2020,14 +2047,14 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 81:36: -> ^( FUNC1 ID ( stat )* )
+					// 82:36: -> ^( FUNC1 ID ( stat )* )
 					{
-						// c.g:81:39: ^( FUNC1 ID ( stat )* )
+						// c.g:82:39: ^( FUNC1 ID ( stat )* )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FUNC1, "FUNC1"), root_1);
 						adaptor.addChild(root_1, stream_ID.nextNode());
-						// c.g:81:50: ( stat )*
+						// c.g:82:50: ( stat )*
 						while ( stream_stat.hasNext() ) {
 							adaptor.addChild(root_1, stream_stat.nextTree());
 						}
@@ -2045,9 +2072,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:82:4: ( 'int' | 'float' ) ID '(' ')' '{' ( stat )* 'return' expr END '}'
+					// c.g:83:4: ( 'int' | 'float' ) ID '(' ')' '{' ( stat )* 'return' expr END '}'
 					{
-					// c.g:82:4: ( 'int' | 'float' )
+					// c.g:83:4: ( 'int' | 'float' )
 					int alt15=2;
 					int LA15_0 = input.LA(1);
 					if ( (LA15_0==45) ) {
@@ -2066,37 +2093,37 @@ public class cParser extends Parser {
 
 					switch (alt15) {
 						case 1 :
-							// c.g:82:5: 'int'
+							// c.g:83:5: 'int'
 							{
-							string_literal69=(Token)match(input,45,FOLLOW_45_in_declarefunc747); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_45.add(string_literal69);
+							string_literal73=(Token)match(input,45,FOLLOW_45_in_declarefunc765); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_45.add(string_literal73);
 
 							}
 							break;
 						case 2 :
-							// c.g:82:11: 'float'
+							// c.g:83:11: 'float'
 							{
-							string_literal70=(Token)match(input,42,FOLLOW_42_in_declarefunc749); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_42.add(string_literal70);
+							string_literal74=(Token)match(input,42,FOLLOW_42_in_declarefunc767); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_42.add(string_literal74);
 
 							}
 							break;
 
 					}
 
-					ID71=(Token)match(input,ID,FOLLOW_ID_in_declarefunc752); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID71);
+					ID75=(Token)match(input,ID,FOLLOW_ID_in_declarefunc770); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID75);
 
-					char_literal72=(Token)match(input,28,FOLLOW_28_in_declarefunc754); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal72);
+					char_literal76=(Token)match(input,28,FOLLOW_28_in_declarefunc772); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal76);
 
-					char_literal73=(Token)match(input,29,FOLLOW_29_in_declarefunc756); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal73);
+					char_literal77=(Token)match(input,29,FOLLOW_29_in_declarefunc774); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal77);
 
-					char_literal74=(Token)match(input,49,FOLLOW_49_in_declarefunc758); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal74);
+					char_literal78=(Token)match(input,49,FOLLOW_49_in_declarefunc776); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal78);
 
-					// c.g:82:35: ( stat )*
+					// c.g:83:35: ( stat )*
 					loop16:
 					while (true) {
 						int alt16=2;
@@ -2107,13 +2134,13 @@ public class cParser extends Parser {
 
 						switch (alt16) {
 						case 1 :
-							// c.g:82:35: stat
+							// c.g:83:35: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc760);
-							stat75=stat();
+							pushFollow(FOLLOW_stat_in_declarefunc778);
+							stat79=stat();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_stat.add(stat75.getTree());
+							if ( state.backtracking==0 ) stream_stat.add(stat79.getTree());
 							}
 							break;
 
@@ -2122,22 +2149,22 @@ public class cParser extends Parser {
 						}
 					}
 
-					string_literal76=(Token)match(input,46,FOLLOW_46_in_declarefunc763); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_46.add(string_literal76);
+					string_literal80=(Token)match(input,46,FOLLOW_46_in_declarefunc781); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_46.add(string_literal80);
 
-					pushFollow(FOLLOW_expr_in_declarefunc765);
-					expr77=expr();
+					pushFollow(FOLLOW_expr_in_declarefunc783);
+					expr81=expr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_expr.add(expr77.getTree());
-					END78=(Token)match(input,END,FOLLOW_END_in_declarefunc767); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_END.add(END78);
+					if ( state.backtracking==0 ) stream_expr.add(expr81.getTree());
+					END82=(Token)match(input,END,FOLLOW_END_in_declarefunc785); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_END.add(END82);
 
-					char_literal79=(Token)match(input,50,FOLLOW_50_in_declarefunc769); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal79);
+					char_literal83=(Token)match(input,50,FOLLOW_50_in_declarefunc787); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal83);
 
 					// AST REWRITE
-					// elements: stat, expr, ID
+					// elements: stat, ID, expr
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2148,14 +2175,14 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 82:63: -> ^( FUNC2 ID ( stat )* expr )
+					// 83:63: -> ^( FUNC2 ID ( stat )* expr )
 					{
-						// c.g:82:66: ^( FUNC2 ID ( stat )* expr )
+						// c.g:83:66: ^( FUNC2 ID ( stat )* expr )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FUNC2, "FUNC2"), root_1);
 						adaptor.addChild(root_1, stream_ID.nextNode());
-						// c.g:82:77: ( stat )*
+						// c.g:83:77: ( stat )*
 						while ( stream_stat.hasNext() ) {
 							adaptor.addChild(root_1, stream_stat.nextTree());
 						}
@@ -2174,31 +2201,31 @@ public class cParser extends Parser {
 					}
 					break;
 				case 3 :
-					// c.g:83:4: 'void' ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* '}'
+					// c.g:84:4: 'void' ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* '}'
 					{
-					string_literal80=(Token)match(input,47,FOLLOW_47_in_declarefunc787); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_47.add(string_literal80);
+					string_literal84=(Token)match(input,47,FOLLOW_47_in_declarefunc805); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_47.add(string_literal84);
 
-					ID81=(Token)match(input,ID,FOLLOW_ID_in_declarefunc789); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID81);
+					ID85=(Token)match(input,ID,FOLLOW_ID_in_declarefunc807); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID85);
 
-					char_literal82=(Token)match(input,28,FOLLOW_28_in_declarefunc791); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal82);
+					char_literal86=(Token)match(input,28,FOLLOW_28_in_declarefunc809); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal86);
 
-					// c.g:83:18: ( num_type ID )
-					// c.g:83:19: num_type ID
+					// c.g:84:18: ( num_type ID )
+					// c.g:84:19: num_type ID
 					{
-					pushFollow(FOLLOW_num_type_in_declarefunc794);
-					num_type83=num_type();
+					pushFollow(FOLLOW_num_type_in_declarefunc812);
+					num_type87=num_type();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_num_type.add(num_type83.getTree());
-					ID84=(Token)match(input,ID,FOLLOW_ID_in_declarefunc796); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID84);
+					if ( state.backtracking==0 ) stream_num_type.add(num_type87.getTree());
+					ID88=(Token)match(input,ID,FOLLOW_ID_in_declarefunc814); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID88);
 
 					}
 
-					// c.g:83:32: ( ',' ( num_type ID ) )*
+					// c.g:84:32: ( ',' ( num_type ID ) )*
 					loop17:
 					while (true) {
 						int alt17=2;
@@ -2209,21 +2236,21 @@ public class cParser extends Parser {
 
 						switch (alt17) {
 						case 1 :
-							// c.g:83:33: ',' ( num_type ID )
+							// c.g:84:33: ',' ( num_type ID )
 							{
-							char_literal85=(Token)match(input,32,FOLLOW_32_in_declarefunc800); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_32.add(char_literal85);
+							char_literal89=(Token)match(input,32,FOLLOW_32_in_declarefunc818); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_32.add(char_literal89);
 
-							// c.g:83:37: ( num_type ID )
-							// c.g:83:38: num_type ID
+							// c.g:84:37: ( num_type ID )
+							// c.g:84:38: num_type ID
 							{
-							pushFollow(FOLLOW_num_type_in_declarefunc803);
-							num_type86=num_type();
+							pushFollow(FOLLOW_num_type_in_declarefunc821);
+							num_type90=num_type();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_num_type.add(num_type86.getTree());
-							ID87=(Token)match(input,ID,FOLLOW_ID_in_declarefunc805); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_ID.add(ID87);
+							if ( state.backtracking==0 ) stream_num_type.add(num_type90.getTree());
+							ID91=(Token)match(input,ID,FOLLOW_ID_in_declarefunc823); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_ID.add(ID91);
 
 							}
 
@@ -2235,13 +2262,13 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal88=(Token)match(input,29,FOLLOW_29_in_declarefunc810); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal88);
+					char_literal92=(Token)match(input,29,FOLLOW_29_in_declarefunc828); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal92);
 
-					char_literal89=(Token)match(input,49,FOLLOW_49_in_declarefunc812); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal89);
+					char_literal93=(Token)match(input,49,FOLLOW_49_in_declarefunc830); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal93);
 
-					// c.g:83:61: ( stat )*
+					// c.g:84:61: ( stat )*
 					loop18:
 					while (true) {
 						int alt18=2;
@@ -2252,13 +2279,13 @@ public class cParser extends Parser {
 
 						switch (alt18) {
 						case 1 :
-							// c.g:83:61: stat
+							// c.g:84:61: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc814);
-							stat90=stat();
+							pushFollow(FOLLOW_stat_in_declarefunc832);
+							stat94=stat();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_stat.add(stat90.getTree());
+							if ( state.backtracking==0 ) stream_stat.add(stat94.getTree());
 							}
 							break;
 
@@ -2267,11 +2294,11 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal91=(Token)match(input,50,FOLLOW_50_in_declarefunc817); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal91);
+					char_literal95=(Token)match(input,50,FOLLOW_50_in_declarefunc835); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal95);
 
 					// AST REWRITE
-					// elements: ID, ID, stat, num_type
+					// elements: ID, stat, num_type, ID
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2282,24 +2309,24 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 83:71: -> ^( FUNC3 ID ( num_type ID )+ ( stat )* )
+					// 84:71: -> ^( FUNC3 ID ( num_type ID )+ ( stat )* )
 					{
-						// c.g:84:3: ^( FUNC3 ID ( num_type ID )+ ( stat )* )
+						// c.g:85:3: ^( FUNC3 ID ( num_type ID )+ ( stat )* )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FUNC3, "FUNC3"), root_1);
 						adaptor.addChild(root_1, stream_ID.nextNode());
-						if ( !(stream_ID.hasNext()||stream_num_type.hasNext()) ) {
+						if ( !(stream_num_type.hasNext()||stream_ID.hasNext()) ) {
 							throw new RewriteEarlyExitException();
 						}
-						while ( stream_ID.hasNext()||stream_num_type.hasNext() ) {
+						while ( stream_num_type.hasNext()||stream_ID.hasNext() ) {
 							adaptor.addChild(root_1, stream_num_type.nextTree());
 							adaptor.addChild(root_1, stream_ID.nextNode());
 						}
-						stream_ID.reset();
 						stream_num_type.reset();
+						stream_ID.reset();
 
-						// c.g:84:29: ( stat )*
+						// c.g:85:29: ( stat )*
 						while ( stream_stat.hasNext() ) {
 							adaptor.addChild(root_1, stream_stat.nextTree());
 						}
@@ -2317,9 +2344,9 @@ public class cParser extends Parser {
 					}
 					break;
 				case 4 :
-					// c.g:85:4: ( 'int' | 'float' ) ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* 'return' expr END '}'
+					// c.g:86:4: ( 'int' | 'float' ) ID '(' ( num_type ID ) ( ',' ( num_type ID ) )* ')' '{' ( stat )* 'return' expr END '}'
 					{
-					// c.g:85:4: ( 'int' | 'float' )
+					// c.g:86:4: ( 'int' | 'float' )
 					int alt19=2;
 					int LA19_0 = input.LA(1);
 					if ( (LA19_0==45) ) {
@@ -2338,44 +2365,44 @@ public class cParser extends Parser {
 
 					switch (alt19) {
 						case 1 :
-							// c.g:85:5: 'int'
+							// c.g:86:5: 'int'
 							{
-							string_literal92=(Token)match(input,45,FOLLOW_45_in_declarefunc843); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_45.add(string_literal92);
+							string_literal96=(Token)match(input,45,FOLLOW_45_in_declarefunc861); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_45.add(string_literal96);
 
 							}
 							break;
 						case 2 :
-							// c.g:85:11: 'float'
+							// c.g:86:11: 'float'
 							{
-							string_literal93=(Token)match(input,42,FOLLOW_42_in_declarefunc845); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_42.add(string_literal93);
+							string_literal97=(Token)match(input,42,FOLLOW_42_in_declarefunc863); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_42.add(string_literal97);
 
 							}
 							break;
 
 					}
 
-					ID94=(Token)match(input,ID,FOLLOW_ID_in_declarefunc848); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID94);
+					ID98=(Token)match(input,ID,FOLLOW_ID_in_declarefunc866); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID98);
 
-					char_literal95=(Token)match(input,28,FOLLOW_28_in_declarefunc850); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal95);
+					char_literal99=(Token)match(input,28,FOLLOW_28_in_declarefunc868); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal99);
 
-					// c.g:85:27: ( num_type ID )
-					// c.g:85:28: num_type ID
+					// c.g:86:27: ( num_type ID )
+					// c.g:86:28: num_type ID
 					{
-					pushFollow(FOLLOW_num_type_in_declarefunc853);
-					num_type96=num_type();
+					pushFollow(FOLLOW_num_type_in_declarefunc871);
+					num_type100=num_type();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_num_type.add(num_type96.getTree());
-					ID97=(Token)match(input,ID,FOLLOW_ID_in_declarefunc855); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID97);
+					if ( state.backtracking==0 ) stream_num_type.add(num_type100.getTree());
+					ID101=(Token)match(input,ID,FOLLOW_ID_in_declarefunc873); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID101);
 
 					}
 
-					// c.g:85:41: ( ',' ( num_type ID ) )*
+					// c.g:86:41: ( ',' ( num_type ID ) )*
 					loop20:
 					while (true) {
 						int alt20=2;
@@ -2386,21 +2413,21 @@ public class cParser extends Parser {
 
 						switch (alt20) {
 						case 1 :
-							// c.g:85:42: ',' ( num_type ID )
+							// c.g:86:42: ',' ( num_type ID )
 							{
-							char_literal98=(Token)match(input,32,FOLLOW_32_in_declarefunc859); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_32.add(char_literal98);
+							char_literal102=(Token)match(input,32,FOLLOW_32_in_declarefunc877); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_32.add(char_literal102);
 
-							// c.g:85:46: ( num_type ID )
-							// c.g:85:47: num_type ID
+							// c.g:86:46: ( num_type ID )
+							// c.g:86:47: num_type ID
 							{
-							pushFollow(FOLLOW_num_type_in_declarefunc862);
-							num_type99=num_type();
+							pushFollow(FOLLOW_num_type_in_declarefunc880);
+							num_type103=num_type();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_num_type.add(num_type99.getTree());
-							ID100=(Token)match(input,ID,FOLLOW_ID_in_declarefunc864); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_ID.add(ID100);
+							if ( state.backtracking==0 ) stream_num_type.add(num_type103.getTree());
+							ID104=(Token)match(input,ID,FOLLOW_ID_in_declarefunc882); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_ID.add(ID104);
 
 							}
 
@@ -2412,13 +2439,13 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal101=(Token)match(input,29,FOLLOW_29_in_declarefunc869); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal101);
+					char_literal105=(Token)match(input,29,FOLLOW_29_in_declarefunc887); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal105);
 
-					char_literal102=(Token)match(input,49,FOLLOW_49_in_declarefunc871); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal102);
+					char_literal106=(Token)match(input,49,FOLLOW_49_in_declarefunc889); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal106);
 
-					// c.g:85:70: ( stat )*
+					// c.g:86:70: ( stat )*
 					loop21:
 					while (true) {
 						int alt21=2;
@@ -2429,13 +2456,13 @@ public class cParser extends Parser {
 
 						switch (alt21) {
 						case 1 :
-							// c.g:85:70: stat
+							// c.g:86:70: stat
 							{
-							pushFollow(FOLLOW_stat_in_declarefunc873);
-							stat103=stat();
+							pushFollow(FOLLOW_stat_in_declarefunc891);
+							stat107=stat();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_stat.add(stat103.getTree());
+							if ( state.backtracking==0 ) stream_stat.add(stat107.getTree());
 							}
 							break;
 
@@ -2444,22 +2471,22 @@ public class cParser extends Parser {
 						}
 					}
 
-					string_literal104=(Token)match(input,46,FOLLOW_46_in_declarefunc876); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_46.add(string_literal104);
+					string_literal108=(Token)match(input,46,FOLLOW_46_in_declarefunc894); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_46.add(string_literal108);
 
-					pushFollow(FOLLOW_expr_in_declarefunc878);
-					expr105=expr();
+					pushFollow(FOLLOW_expr_in_declarefunc896);
+					expr109=expr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_expr.add(expr105.getTree());
-					END106=(Token)match(input,END,FOLLOW_END_in_declarefunc880); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_END.add(END106);
+					if ( state.backtracking==0 ) stream_expr.add(expr109.getTree());
+					END110=(Token)match(input,END,FOLLOW_END_in_declarefunc898); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_END.add(END110);
 
-					char_literal107=(Token)match(input,50,FOLLOW_50_in_declarefunc882); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal107);
+					char_literal111=(Token)match(input,50,FOLLOW_50_in_declarefunc900); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal111);
 
 					// AST REWRITE
-					// elements: ID, stat, ID, expr, num_type
+					// elements: ID, num_type, stat, ID, expr
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2470,9 +2497,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 86:2: -> ^( FUNC4 ID ( num_type ID )+ ( stat )* expr )
+					// 87:2: -> ^( FUNC4 ID ( num_type ID )+ ( stat )* expr )
 					{
-						// c.g:86:5: ^( FUNC4 ID ( num_type ID )+ ( stat )* expr )
+						// c.g:87:5: ^( FUNC4 ID ( num_type ID )+ ( stat )* expr )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FUNC4, "FUNC4"), root_1);
@@ -2487,7 +2514,7 @@ public class cParser extends Parser {
 						stream_ID.reset();
 						stream_num_type.reset();
 
-						// c.g:86:31: ( stat )*
+						// c.g:87:31: ( stat )*
 						while ( stream_stat.hasNext() ) {
 							adaptor.addChild(root_1, stream_stat.nextTree());
 						}
@@ -2535,30 +2562,30 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "callfunc"
-	// c.g:89:1: callfunc : ( ID '(' ')' -> ^( CALL ID ) | ID '(' expr ( ',' expr )* ')' -> ^( CALL ID expr ( expr )* ) );
+	// c.g:90:1: callfunc : ( ID '(' ')' -> ^( CALL ID ) | ID '(' expr ( ',' expr )* ')' -> ^( CALL ID expr ( expr )* ) );
 	public final cParser.callfunc_return callfunc() throws RecognitionException {
 		cParser.callfunc_return retval = new cParser.callfunc_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token ID108=null;
-		Token char_literal109=null;
-		Token char_literal110=null;
-		Token ID111=null;
-		Token char_literal112=null;
+		Token ID112=null;
+		Token char_literal113=null;
 		Token char_literal114=null;
+		Token ID115=null;
 		Token char_literal116=null;
-		ParserRuleReturnScope expr113 =null;
-		ParserRuleReturnScope expr115 =null;
+		Token char_literal118=null;
+		Token char_literal120=null;
+		ParserRuleReturnScope expr117 =null;
+		ParserRuleReturnScope expr119 =null;
 
-		CommonTree ID108_tree=null;
-		CommonTree char_literal109_tree=null;
-		CommonTree char_literal110_tree=null;
-		CommonTree ID111_tree=null;
-		CommonTree char_literal112_tree=null;
+		CommonTree ID112_tree=null;
+		CommonTree char_literal113_tree=null;
 		CommonTree char_literal114_tree=null;
+		CommonTree ID115_tree=null;
 		CommonTree char_literal116_tree=null;
+		CommonTree char_literal118_tree=null;
+		CommonTree char_literal120_tree=null;
 		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
 		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
@@ -2566,7 +2593,7 @@ public class cParser extends Parser {
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 
 		try {
-			// c.g:89:10: ( ID '(' ')' -> ^( CALL ID ) | ID '(' expr ( ',' expr )* ')' -> ^( CALL ID expr ( expr )* ) )
+			// c.g:90:10: ( ID '(' ')' -> ^( CALL ID ) | ID '(' expr ( ',' expr )* ')' -> ^( CALL ID expr ( expr )* ) )
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0==ID) ) {
@@ -2621,16 +2648,16 @@ public class cParser extends Parser {
 
 			switch (alt24) {
 				case 1 :
-					// c.g:89:12: ID '(' ')'
+					// c.g:90:12: ID '(' ')'
 					{
-					ID108=(Token)match(input,ID,FOLLOW_ID_in_callfunc915); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID108);
+					ID112=(Token)match(input,ID,FOLLOW_ID_in_callfunc933); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID112);
 
-					char_literal109=(Token)match(input,28,FOLLOW_28_in_callfunc917); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal109);
+					char_literal113=(Token)match(input,28,FOLLOW_28_in_callfunc935); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal113);
 
-					char_literal110=(Token)match(input,29,FOLLOW_29_in_callfunc919); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal110);
+					char_literal114=(Token)match(input,29,FOLLOW_29_in_callfunc937); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal114);
 
 					// AST REWRITE
 					// elements: ID
@@ -2644,9 +2671,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 89:23: -> ^( CALL ID )
+					// 90:23: -> ^( CALL ID )
 					{
-						// c.g:89:26: ^( CALL ID )
+						// c.g:90:26: ^( CALL ID )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CALL, "CALL"), root_1);
@@ -2663,20 +2690,20 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:90:4: ID '(' expr ( ',' expr )* ')'
+					// c.g:91:4: ID '(' expr ( ',' expr )* ')'
 					{
-					ID111=(Token)match(input,ID,FOLLOW_ID_in_callfunc932); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_ID.add(ID111);
+					ID115=(Token)match(input,ID,FOLLOW_ID_in_callfunc950); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_ID.add(ID115);
 
-					char_literal112=(Token)match(input,28,FOLLOW_28_in_callfunc934); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_28.add(char_literal112);
+					char_literal116=(Token)match(input,28,FOLLOW_28_in_callfunc952); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_28.add(char_literal116);
 
-					pushFollow(FOLLOW_expr_in_callfunc936);
-					expr113=expr();
+					pushFollow(FOLLOW_expr_in_callfunc954);
+					expr117=expr();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_expr.add(expr113.getTree());
-					// c.g:90:16: ( ',' expr )*
+					if ( state.backtracking==0 ) stream_expr.add(expr117.getTree());
+					// c.g:91:16: ( ',' expr )*
 					loop23:
 					while (true) {
 						int alt23=2;
@@ -2687,16 +2714,16 @@ public class cParser extends Parser {
 
 						switch (alt23) {
 						case 1 :
-							// c.g:90:17: ',' expr
+							// c.g:91:17: ',' expr
 							{
-							char_literal114=(Token)match(input,32,FOLLOW_32_in_callfunc939); if (state.failed) return retval; 
-							if ( state.backtracking==0 ) stream_32.add(char_literal114);
+							char_literal118=(Token)match(input,32,FOLLOW_32_in_callfunc957); if (state.failed) return retval; 
+							if ( state.backtracking==0 ) stream_32.add(char_literal118);
 
-							pushFollow(FOLLOW_expr_in_callfunc941);
-							expr115=expr();
+							pushFollow(FOLLOW_expr_in_callfunc959);
+							expr119=expr();
 							state._fsp--;
 							if (state.failed) return retval;
-							if ( state.backtracking==0 ) stream_expr.add(expr115.getTree());
+							if ( state.backtracking==0 ) stream_expr.add(expr119.getTree());
 							}
 							break;
 
@@ -2705,11 +2732,11 @@ public class cParser extends Parser {
 						}
 					}
 
-					char_literal116=(Token)match(input,29,FOLLOW_29_in_callfunc945); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_29.add(char_literal116);
+					char_literal120=(Token)match(input,29,FOLLOW_29_in_callfunc963); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_29.add(char_literal120);
 
 					// AST REWRITE
-					// elements: ID, expr, expr
+					// elements: expr, expr, ID
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2720,15 +2747,15 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 90:32: -> ^( CALL ID expr ( expr )* )
+					// 91:32: -> ^( CALL ID expr ( expr )* )
 					{
-						// c.g:90:35: ^( CALL ID expr ( expr )* )
+						// c.g:91:35: ^( CALL ID expr ( expr )* )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CALL, "CALL"), root_1);
 						adaptor.addChild(root_1, stream_ID.nextNode());
 						adaptor.addChild(root_1, stream_expr.nextTree());
-						// c.g:90:50: ( expr )*
+						// c.g:91:50: ( expr )*
 						while ( stream_expr.hasNext() ) {
 							adaptor.addChild(root_1, stream_expr.nextTree());
 						}
@@ -2775,27 +2802,27 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "stat"
-	// c.g:93:1: stat : ( declarevar END -> ^( DECLAREVAR declarevar ) | givevalue END -> ^( GIVEVALUE givevalue ) | ifstat -> ^( IFSTAT ifstat ) | forstat -> ^( FORSTAT forstat ) | whilestat -> ^( WHILESTAT whilestat ) | declarefunc -> ^( DECLAREFUNC declarefunc ) | callfunc END -> ^( CALLFUNC callfunc ) );
+	// c.g:94:1: stat : ( declarevar END -> ^( DECLAREVAR declarevar ) | givevalue END -> ^( GIVEVALUE givevalue ) | ifstat -> ^( IFSTAT ifstat ) | forstat -> ^( FORSTAT forstat ) | whilestat -> ^( WHILESTAT whilestat ) | declarefunc -> ^( DECLAREFUNC declarefunc ) | callfunc END -> ^( CALLFUNC callfunc ) );
 	public final cParser.stat_return stat() throws RecognitionException {
 		cParser.stat_return retval = new cParser.stat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token END118=null;
-		Token END120=null;
-		Token END126=null;
-		ParserRuleReturnScope declarevar117 =null;
-		ParserRuleReturnScope givevalue119 =null;
-		ParserRuleReturnScope ifstat121 =null;
-		ParserRuleReturnScope forstat122 =null;
-		ParserRuleReturnScope whilestat123 =null;
-		ParserRuleReturnScope declarefunc124 =null;
-		ParserRuleReturnScope callfunc125 =null;
+		Token END122=null;
+		Token END124=null;
+		Token END130=null;
+		ParserRuleReturnScope declarevar121 =null;
+		ParserRuleReturnScope givevalue123 =null;
+		ParserRuleReturnScope ifstat125 =null;
+		ParserRuleReturnScope forstat126 =null;
+		ParserRuleReturnScope whilestat127 =null;
+		ParserRuleReturnScope declarefunc128 =null;
+		ParserRuleReturnScope callfunc129 =null;
 
-		CommonTree END118_tree=null;
-		CommonTree END120_tree=null;
-		CommonTree END126_tree=null;
+		CommonTree END122_tree=null;
+		CommonTree END124_tree=null;
+		CommonTree END130_tree=null;
 		RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
 		RewriteRuleSubtreeStream stream_ifstat=new RewriteRuleSubtreeStream(adaptor,"rule ifstat");
 		RewriteRuleSubtreeStream stream_declarefunc=new RewriteRuleSubtreeStream(adaptor,"rule declarefunc");
@@ -2806,7 +2833,7 @@ public class cParser extends Parser {
 		RewriteRuleSubtreeStream stream_forstat=new RewriteRuleSubtreeStream(adaptor,"rule forstat");
 
 		try {
-			// c.g:93:6: ( declarevar END -> ^( DECLAREVAR declarevar ) | givevalue END -> ^( GIVEVALUE givevalue ) | ifstat -> ^( IFSTAT ifstat ) | forstat -> ^( FORSTAT forstat ) | whilestat -> ^( WHILESTAT whilestat ) | declarefunc -> ^( DECLAREFUNC declarefunc ) | callfunc END -> ^( CALLFUNC callfunc ) )
+			// c.g:94:6: ( declarevar END -> ^( DECLAREVAR declarevar ) | givevalue END -> ^( GIVEVALUE givevalue ) | ifstat -> ^( IFSTAT ifstat ) | forstat -> ^( FORSTAT forstat ) | whilestat -> ^( WHILESTAT whilestat ) | declarefunc -> ^( DECLAREFUNC declarefunc ) | callfunc END -> ^( CALLFUNC callfunc ) )
 			int alt25=7;
 			switch ( input.LA(1) ) {
 			case 45:
@@ -2950,15 +2977,15 @@ public class cParser extends Parser {
 			}
 			switch (alt25) {
 				case 1 :
-					// c.g:93:8: declarevar END
+					// c.g:94:8: declarevar END
 					{
-					pushFollow(FOLLOW_declarevar_in_stat970);
-					declarevar117=declarevar();
+					pushFollow(FOLLOW_declarevar_in_stat988);
+					declarevar121=declarevar();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_declarevar.add(declarevar117.getTree());
-					END118=(Token)match(input,END,FOLLOW_END_in_stat972); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_END.add(END118);
+					if ( state.backtracking==0 ) stream_declarevar.add(declarevar121.getTree());
+					END122=(Token)match(input,END,FOLLOW_END_in_stat990); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_END.add(END122);
 
 					// AST REWRITE
 					// elements: declarevar
@@ -2972,9 +2999,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 93:23: -> ^( DECLAREVAR declarevar )
+					// 94:23: -> ^( DECLAREVAR declarevar )
 					{
-						// c.g:93:26: ^( DECLAREVAR declarevar )
+						// c.g:94:26: ^( DECLAREVAR declarevar )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(DECLAREVAR, "DECLAREVAR"), root_1);
@@ -2991,15 +3018,15 @@ public class cParser extends Parser {
 					}
 					break;
 				case 2 :
-					// c.g:94:4: givevalue END
+					// c.g:95:4: givevalue END
 					{
-					pushFollow(FOLLOW_givevalue_in_stat985);
-					givevalue119=givevalue();
+					pushFollow(FOLLOW_givevalue_in_stat1003);
+					givevalue123=givevalue();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_givevalue.add(givevalue119.getTree());
-					END120=(Token)match(input,END,FOLLOW_END_in_stat987); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_END.add(END120);
+					if ( state.backtracking==0 ) stream_givevalue.add(givevalue123.getTree());
+					END124=(Token)match(input,END,FOLLOW_END_in_stat1005); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_END.add(END124);
 
 					// AST REWRITE
 					// elements: givevalue
@@ -3013,9 +3040,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 94:17: -> ^( GIVEVALUE givevalue )
+					// 95:17: -> ^( GIVEVALUE givevalue )
 					{
-						// c.g:94:20: ^( GIVEVALUE givevalue )
+						// c.g:95:20: ^( GIVEVALUE givevalue )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(GIVEVALUE, "GIVEVALUE"), root_1);
@@ -3032,13 +3059,13 @@ public class cParser extends Parser {
 					}
 					break;
 				case 3 :
-					// c.g:95:4: ifstat
+					// c.g:96:4: ifstat
 					{
-					pushFollow(FOLLOW_ifstat_in_stat999);
-					ifstat121=ifstat();
+					pushFollow(FOLLOW_ifstat_in_stat1017);
+					ifstat125=ifstat();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_ifstat.add(ifstat121.getTree());
+					if ( state.backtracking==0 ) stream_ifstat.add(ifstat125.getTree());
 					// AST REWRITE
 					// elements: ifstat
 					// token labels: 
@@ -3051,9 +3078,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 95:11: -> ^( IFSTAT ifstat )
+					// 96:11: -> ^( IFSTAT ifstat )
 					{
-						// c.g:95:14: ^( IFSTAT ifstat )
+						// c.g:96:14: ^( IFSTAT ifstat )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IFSTAT, "IFSTAT"), root_1);
@@ -3070,13 +3097,13 @@ public class cParser extends Parser {
 					}
 					break;
 				case 4 :
-					// c.g:96:4: forstat
+					// c.g:97:4: forstat
 					{
-					pushFollow(FOLLOW_forstat_in_stat1012);
-					forstat122=forstat();
+					pushFollow(FOLLOW_forstat_in_stat1030);
+					forstat126=forstat();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_forstat.add(forstat122.getTree());
+					if ( state.backtracking==0 ) stream_forstat.add(forstat126.getTree());
 					// AST REWRITE
 					// elements: forstat
 					// token labels: 
@@ -3089,9 +3116,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 96:12: -> ^( FORSTAT forstat )
+					// 97:12: -> ^( FORSTAT forstat )
 					{
-						// c.g:96:15: ^( FORSTAT forstat )
+						// c.g:97:15: ^( FORSTAT forstat )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FORSTAT, "FORSTAT"), root_1);
@@ -3108,13 +3135,13 @@ public class cParser extends Parser {
 					}
 					break;
 				case 5 :
-					// c.g:97:4: whilestat
+					// c.g:98:4: whilestat
 					{
-					pushFollow(FOLLOW_whilestat_in_stat1025);
-					whilestat123=whilestat();
+					pushFollow(FOLLOW_whilestat_in_stat1043);
+					whilestat127=whilestat();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_whilestat.add(whilestat123.getTree());
+					if ( state.backtracking==0 ) stream_whilestat.add(whilestat127.getTree());
 					// AST REWRITE
 					// elements: whilestat
 					// token labels: 
@@ -3127,9 +3154,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 97:14: -> ^( WHILESTAT whilestat )
+					// 98:14: -> ^( WHILESTAT whilestat )
 					{
-						// c.g:97:17: ^( WHILESTAT whilestat )
+						// c.g:98:17: ^( WHILESTAT whilestat )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(WHILESTAT, "WHILESTAT"), root_1);
@@ -3146,13 +3173,13 @@ public class cParser extends Parser {
 					}
 					break;
 				case 6 :
-					// c.g:98:4: declarefunc
+					// c.g:99:4: declarefunc
 					{
-					pushFollow(FOLLOW_declarefunc_in_stat1038);
-					declarefunc124=declarefunc();
+					pushFollow(FOLLOW_declarefunc_in_stat1056);
+					declarefunc128=declarefunc();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_declarefunc.add(declarefunc124.getTree());
+					if ( state.backtracking==0 ) stream_declarefunc.add(declarefunc128.getTree());
 					// AST REWRITE
 					// elements: declarefunc
 					// token labels: 
@@ -3165,9 +3192,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 98:16: -> ^( DECLAREFUNC declarefunc )
+					// 99:16: -> ^( DECLAREFUNC declarefunc )
 					{
-						// c.g:98:19: ^( DECLAREFUNC declarefunc )
+						// c.g:99:19: ^( DECLAREFUNC declarefunc )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(DECLAREFUNC, "DECLAREFUNC"), root_1);
@@ -3184,15 +3211,15 @@ public class cParser extends Parser {
 					}
 					break;
 				case 7 :
-					// c.g:99:4: callfunc END
+					// c.g:100:4: callfunc END
 					{
-					pushFollow(FOLLOW_callfunc_in_stat1051);
-					callfunc125=callfunc();
+					pushFollow(FOLLOW_callfunc_in_stat1069);
+					callfunc129=callfunc();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_callfunc.add(callfunc125.getTree());
-					END126=(Token)match(input,END,FOLLOW_END_in_stat1053); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_END.add(END126);
+					if ( state.backtracking==0 ) stream_callfunc.add(callfunc129.getTree());
+					END130=(Token)match(input,END,FOLLOW_END_in_stat1071); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_END.add(END130);
 
 					// AST REWRITE
 					// elements: callfunc
@@ -3206,9 +3233,9 @@ public class cParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 99:17: -> ^( CALLFUNC callfunc )
+					// 100:17: -> ^( CALLFUNC callfunc )
 					{
-						// c.g:99:20: ^( CALLFUNC callfunc )
+						// c.g:100:20: ^( CALLFUNC callfunc )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CALLFUNC, "CALLFUNC"), root_1);
@@ -3254,22 +3281,22 @@ public class cParser extends Parser {
 
 
 	// $ANTLR start "prog"
-	// c.g:102:1: prog : ( stat )* -> ^( PROG ( stat )* ) ;
+	// c.g:103:1: prog : ( stat )* -> ^( PROG ( stat )* ) ;
 	public final cParser.prog_return prog() throws RecognitionException {
 		cParser.prog_return retval = new cParser.prog_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope stat127 =null;
+		ParserRuleReturnScope stat131 =null;
 
 		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
 
 		try {
-			// c.g:102:6: ( ( stat )* -> ^( PROG ( stat )* ) )
-			// c.g:102:8: ( stat )*
+			// c.g:103:6: ( ( stat )* -> ^( PROG ( stat )* ) )
+			// c.g:103:8: ( stat )*
 			{
-			// c.g:102:8: ( stat )*
+			// c.g:103:8: ( stat )*
 			loop26:
 			while (true) {
 				int alt26=2;
@@ -3280,13 +3307,13 @@ public class cParser extends Parser {
 
 				switch (alt26) {
 				case 1 :
-					// c.g:102:8: stat
+					// c.g:103:8: stat
 					{
-					pushFollow(FOLLOW_stat_in_prog1071);
-					stat127=stat();
+					pushFollow(FOLLOW_stat_in_prog1089);
+					stat131=stat();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_stat.add(stat127.getTree());
+					if ( state.backtracking==0 ) stream_stat.add(stat131.getTree());
 					}
 					break;
 
@@ -3307,13 +3334,13 @@ public class cParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 102:14: -> ^( PROG ( stat )* )
+			// 103:14: -> ^( PROG ( stat )* )
 			{
-				// c.g:102:17: ^( PROG ( stat )* )
+				// c.g:103:17: ^( PROG ( stat )* )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PROG, "PROG"), root_1);
-				// c.g:102:24: ( stat )*
+				// c.g:103:24: ( stat )*
 				while ( stream_stat.hasNext() ) {
 					adaptor.addChild(root_1, stream_stat.nextTree());
 				}
@@ -3355,23 +3382,25 @@ public class cParser extends Parser {
 		ParserRuleReturnScope s2 =null;
 
 
-		// c.g:64:4: ( 'if' '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}' )
-		// c.g:64:4: 'if' '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}'
+		// c.g:65:4: ( 'if' INT '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}' )
+		// c.g:65:4: 'if' INT '(' boolexpr ')' '{' (s1= stat )* '}' 'else' '{' (s2= stat )* '}'
 		{
-		match(input,44,FOLLOW_44_in_synpred1_c512); if (state.failed) return;
+		match(input,44,FOLLOW_44_in_synpred1_c513); if (state.failed) return;
 
-		match(input,28,FOLLOW_28_in_synpred1_c514); if (state.failed) return;
+		match(input,INT,FOLLOW_INT_in_synpred1_c515); if (state.failed) return;
 
-		pushFollow(FOLLOW_boolexpr_in_synpred1_c516);
+		match(input,28,FOLLOW_28_in_synpred1_c517); if (state.failed) return;
+
+		pushFollow(FOLLOW_boolexpr_in_synpred1_c519);
 		boolexpr();
 		state._fsp--;
 		if (state.failed) return;
 
-		match(input,29,FOLLOW_29_in_synpred1_c518); if (state.failed) return;
+		match(input,29,FOLLOW_29_in_synpred1_c521); if (state.failed) return;
 
-		match(input,49,FOLLOW_49_in_synpred1_c520); if (state.failed) return;
+		match(input,49,FOLLOW_49_in_synpred1_c523); if (state.failed) return;
 
-		// c.g:64:32: (s1= stat )*
+		// c.g:65:36: (s1= stat )*
 		loop27:
 		while (true) {
 			int alt27=2;
@@ -3382,9 +3411,9 @@ public class cParser extends Parser {
 
 			switch (alt27) {
 			case 1 :
-				// c.g:64:32: s1= stat
+				// c.g:65:36: s1= stat
 				{
-				pushFollow(FOLLOW_stat_in_synpred1_c524);
+				pushFollow(FOLLOW_stat_in_synpred1_c527);
 				s1=stat();
 				state._fsp--;
 				if (state.failed) return;
@@ -3397,13 +3426,13 @@ public class cParser extends Parser {
 			}
 		}
 
-		match(input,50,FOLLOW_50_in_synpred1_c527); if (state.failed) return;
+		match(input,50,FOLLOW_50_in_synpred1_c530); if (state.failed) return;
 
-		match(input,41,FOLLOW_41_in_synpred1_c529); if (state.failed) return;
+		match(input,41,FOLLOW_41_in_synpred1_c532); if (state.failed) return;
 
-		match(input,49,FOLLOW_49_in_synpred1_c531); if (state.failed) return;
+		match(input,49,FOLLOW_49_in_synpred1_c534); if (state.failed) return;
 
-		// c.g:64:56: (s2= stat )*
+		// c.g:65:60: (s2= stat )*
 		loop28:
 		while (true) {
 			int alt28=2;
@@ -3414,9 +3443,9 @@ public class cParser extends Parser {
 
 			switch (alt28) {
 			case 1 :
-				// c.g:64:56: s2= stat
+				// c.g:65:60: s2= stat
 				{
-				pushFollow(FOLLOW_stat_in_synpred1_c535);
+				pushFollow(FOLLOW_stat_in_synpred1_c538);
 				s2=stat();
 				state._fsp--;
 				if (state.failed) return;
@@ -3429,7 +3458,7 @@ public class cParser extends Parser {
 			}
 		}
 
-		match(input,50,FOLLOW_50_in_synpred1_c538); if (state.failed) return;
+		match(input,50,FOLLOW_50_in_synpred1_c541); if (state.failed) return;
 
 		}
 
@@ -3455,146 +3484,151 @@ public class cParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_expr_in_boolexpr328 = new BitSet(new long[]{0x000001D808000000L});
-	public static final BitSet FOLLOW_38_in_boolexpr331 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_27_in_boolexpr334 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_39_in_boolexpr337 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_35_in_boolexpr340 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_40_in_boolexpr343 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_36_in_boolexpr346 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_boolexpr350 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_multexpr_in_expr359 = new BitSet(new long[]{0x0000000280000002L});
-	public static final BitSet FOLLOW_31_in_expr363 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_33_in_expr368 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_multexpr_in_expr372 = new BitSet(new long[]{0x0000000280000002L});
-	public static final BitSet FOLLOW_atom_in_multexpr383 = new BitSet(new long[]{0x0000000440000002L});
-	public static final BitSet FOLLOW_30_in_multexpr387 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_34_in_multexpr390 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_atom_in_multexpr394 = new BitSet(new long[]{0x0000000440000002L});
-	public static final BitSet FOLLOW_28_in_atom405 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_atom407 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_atom409 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_num_in_atom429 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_atom434 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_callfunc_in_atom439 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_45_in_declarevar450 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarevar453 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_42_in_declarevar458 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarevar461 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_givevalue474 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_givevalue477 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_givevalue479 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_44_in_ifstat512 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_ifstat514 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_boolexpr_in_ifstat516 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_ifstat518 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_ifstat520 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_ifstat524 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_ifstat527 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_ifstat529 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_ifstat531 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_ifstat535 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_ifstat538 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_44_in_ifstat560 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_ifstat562 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_boolexpr_in_ifstat564 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_ifstat566 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_ifstat568 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_ifstat570 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_ifstat573 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_48_in_whilestat607 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_whilestat609 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_boolexpr_in_whilestat611 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_whilestat613 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_whilestat615 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_whilestat617 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_whilestat620 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_43_in_forstat654 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_forstat656 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_givevalue_in_forstat660 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_forstat662 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_boolexpr_in_forstat666 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_forstat668 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_givevalue_in_forstat672 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_forstat674 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_forstat676 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_forstat680 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_forstat683 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_47_in_declarefunc717 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc719 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_declarefunc721 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_declarefunc723 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_declarefunc725 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_declarefunc727 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_declarefunc730 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_45_in_declarefunc747 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_42_in_declarefunc749 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc752 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_declarefunc754 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_declarefunc756 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_declarefunc758 = new BitSet(new long[]{0x0001FC0000080000L});
-	public static final BitSet FOLLOW_stat_in_declarefunc760 = new BitSet(new long[]{0x0001FC0000080000L});
-	public static final BitSet FOLLOW_46_in_declarefunc763 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_declarefunc765 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_declarefunc767 = new BitSet(new long[]{0x0004000000000000L});
-	public static final BitSet FOLLOW_50_in_declarefunc769 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_47_in_declarefunc787 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc789 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_declarefunc791 = new BitSet(new long[]{0x0000240000000000L});
-	public static final BitSet FOLLOW_num_type_in_declarefunc794 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc796 = new BitSet(new long[]{0x0000000120000000L});
-	public static final BitSet FOLLOW_32_in_declarefunc800 = new BitSet(new long[]{0x0000240000000000L});
-	public static final BitSet FOLLOW_num_type_in_declarefunc803 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc805 = new BitSet(new long[]{0x0000000120000000L});
-	public static final BitSet FOLLOW_29_in_declarefunc810 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_declarefunc812 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_declarefunc814 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_declarefunc817 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_45_in_declarefunc843 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_42_in_declarefunc845 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc848 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_declarefunc850 = new BitSet(new long[]{0x0000240000000000L});
-	public static final BitSet FOLLOW_num_type_in_declarefunc853 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc855 = new BitSet(new long[]{0x0000000120000000L});
-	public static final BitSet FOLLOW_32_in_declarefunc859 = new BitSet(new long[]{0x0000240000000000L});
-	public static final BitSet FOLLOW_num_type_in_declarefunc862 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_declarefunc864 = new BitSet(new long[]{0x0000000120000000L});
-	public static final BitSet FOLLOW_29_in_declarefunc869 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_declarefunc871 = new BitSet(new long[]{0x0001FC0000080000L});
-	public static final BitSet FOLLOW_stat_in_declarefunc873 = new BitSet(new long[]{0x0001FC0000080000L});
-	public static final BitSet FOLLOW_46_in_declarefunc876 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_declarefunc878 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_declarefunc880 = new BitSet(new long[]{0x0004000000000000L});
-	public static final BitSet FOLLOW_50_in_declarefunc882 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_callfunc915 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_callfunc917 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_callfunc919 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_callfunc932 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_callfunc934 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_callfunc936 = new BitSet(new long[]{0x0000000120000000L});
-	public static final BitSet FOLLOW_32_in_callfunc939 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_expr_in_callfunc941 = new BitSet(new long[]{0x0000000120000000L});
-	public static final BitSet FOLLOW_29_in_callfunc945 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_declarevar_in_stat970 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_stat972 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_givevalue_in_stat985 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_stat987 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ifstat_in_stat999 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_forstat_in_stat1012 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_whilestat_in_stat1025 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_declarefunc_in_stat1038 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_callfunc_in_stat1051 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_END_in_stat1053 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_stat_in_prog1071 = new BitSet(new long[]{0x0001BC0000080002L});
-	public static final BitSet FOLLOW_44_in_synpred1_c512 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_28_in_synpred1_c514 = new BitSet(new long[]{0x0000000010481000L});
-	public static final BitSet FOLLOW_boolexpr_in_synpred1_c516 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_synpred1_c518 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_synpred1_c520 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_synpred1_c524 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_synpred1_c527 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_synpred1_c529 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_synpred1_c531 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_stat_in_synpred1_c535 = new BitSet(new long[]{0x0005BC0000080000L});
-	public static final BitSet FOLLOW_50_in_synpred1_c538 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_boolexpr329 = new BitSet(new long[]{0x000001D808000000L});
+	public static final BitSet FOLLOW_38_in_boolexpr332 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_27_in_boolexpr335 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_39_in_boolexpr338 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_35_in_boolexpr341 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_40_in_boolexpr344 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_36_in_boolexpr347 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_boolexpr351 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_multexpr_in_expr360 = new BitSet(new long[]{0x0000000280000002L});
+	public static final BitSet FOLLOW_31_in_expr364 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_33_in_expr369 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_multexpr_in_expr373 = new BitSet(new long[]{0x0000000280000002L});
+	public static final BitSet FOLLOW_atom_in_multexpr384 = new BitSet(new long[]{0x0000000440000002L});
+	public static final BitSet FOLLOW_30_in_multexpr388 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_34_in_multexpr391 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_atom_in_multexpr395 = new BitSet(new long[]{0x0000000440000002L});
+	public static final BitSet FOLLOW_28_in_atom406 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_atom408 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_atom410 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_num_in_atom430 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_atom435 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_callfunc_in_atom440 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_45_in_declarevar451 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarevar454 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_42_in_declarevar459 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarevar462 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_givevalue475 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_37_in_givevalue478 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_givevalue480 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_44_in_ifstat513 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_INT_in_ifstat515 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_ifstat517 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_boolexpr_in_ifstat519 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_ifstat521 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_ifstat523 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_ifstat527 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_ifstat530 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_41_in_ifstat532 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_ifstat534 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_ifstat538 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_ifstat541 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_44_in_ifstat566 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_INT_in_ifstat568 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_ifstat570 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_boolexpr_in_ifstat572 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_ifstat574 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_ifstat576 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_ifstat578 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_ifstat581 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_48_in_whilestat617 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_INT_in_whilestat619 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_whilestat621 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_boolexpr_in_whilestat623 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_whilestat625 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_whilestat627 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_whilestat629 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_whilestat632 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_43_in_forstat668 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_INT_in_forstat670 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_forstat672 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_givevalue_in_forstat676 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_forstat678 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_boolexpr_in_forstat682 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_forstat684 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_givevalue_in_forstat688 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_forstat690 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_forstat692 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_forstat696 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_forstat699 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_47_in_declarefunc735 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc737 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_declarefunc739 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_declarefunc741 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_declarefunc743 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_declarefunc745 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_declarefunc748 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_45_in_declarefunc765 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_42_in_declarefunc767 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc770 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_declarefunc772 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_declarefunc774 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_declarefunc776 = new BitSet(new long[]{0x0001FC0000080000L});
+	public static final BitSet FOLLOW_stat_in_declarefunc778 = new BitSet(new long[]{0x0001FC0000080000L});
+	public static final BitSet FOLLOW_46_in_declarefunc781 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_declarefunc783 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_declarefunc785 = new BitSet(new long[]{0x0004000000000000L});
+	public static final BitSet FOLLOW_50_in_declarefunc787 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_47_in_declarefunc805 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc807 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_declarefunc809 = new BitSet(new long[]{0x0000240000000000L});
+	public static final BitSet FOLLOW_num_type_in_declarefunc812 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc814 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_32_in_declarefunc818 = new BitSet(new long[]{0x0000240000000000L});
+	public static final BitSet FOLLOW_num_type_in_declarefunc821 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc823 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_29_in_declarefunc828 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_declarefunc830 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_declarefunc832 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_declarefunc835 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_45_in_declarefunc861 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_42_in_declarefunc863 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc866 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_declarefunc868 = new BitSet(new long[]{0x0000240000000000L});
+	public static final BitSet FOLLOW_num_type_in_declarefunc871 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc873 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_32_in_declarefunc877 = new BitSet(new long[]{0x0000240000000000L});
+	public static final BitSet FOLLOW_num_type_in_declarefunc880 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_ID_in_declarefunc882 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_29_in_declarefunc887 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_declarefunc889 = new BitSet(new long[]{0x0001FC0000080000L});
+	public static final BitSet FOLLOW_stat_in_declarefunc891 = new BitSet(new long[]{0x0001FC0000080000L});
+	public static final BitSet FOLLOW_46_in_declarefunc894 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_declarefunc896 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_declarefunc898 = new BitSet(new long[]{0x0004000000000000L});
+	public static final BitSet FOLLOW_50_in_declarefunc900 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_callfunc933 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_callfunc935 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_callfunc937 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_callfunc950 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_callfunc952 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_callfunc954 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_32_in_callfunc957 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_expr_in_callfunc959 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_29_in_callfunc963 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_declarevar_in_stat988 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_stat990 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_givevalue_in_stat1003 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_stat1005 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ifstat_in_stat1017 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_forstat_in_stat1030 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_whilestat_in_stat1043 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_declarefunc_in_stat1056 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_callfunc_in_stat1069 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_END_in_stat1071 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_stat_in_prog1089 = new BitSet(new long[]{0x0001BC0000080002L});
+	public static final BitSet FOLLOW_44_in_synpred1_c513 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_INT_in_synpred1_c515 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_synpred1_c517 = new BitSet(new long[]{0x0000000010481000L});
+	public static final BitSet FOLLOW_boolexpr_in_synpred1_c519 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_synpred1_c521 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_synpred1_c523 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_synpred1_c527 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_synpred1_c530 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_41_in_synpred1_c532 = new BitSet(new long[]{0x0002000000000000L});
+	public static final BitSet FOLLOW_49_in_synpred1_c534 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_stat_in_synpred1_c538 = new BitSet(new long[]{0x0005BC0000080000L});
+	public static final BitSet FOLLOW_50_in_synpred1_c541 = new BitSet(new long[]{0x0000000000000002L});
 }
